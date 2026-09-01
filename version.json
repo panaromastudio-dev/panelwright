@@ -1,6 +1,7 @@
 {
-  "version": "5.2.0",
+  "version": "5.3.2",
   "url": "https://github.com/panaromastudio-dev/Furniture-Nesting-pro/releases/latest",
-  "notes": "",
-  "notes_en": ""
+  "rbz": "https://github.com/panaromastudio-dev/Furniture-Nesting-pro/releases/latest/download/FurnitureNestingPro.rbz",
+  "notes": "v5.3.2 — Зураг төслийн үнийн санал ТУСДАА\n\n• Зураг төслийн үнийн санал одоо тавилгын өртгөөс ТУСДАА PDF\n• Төслийн шинэ фолдер «10_Хэмжилт_рендер_зураг» — зураг төслийн үнийн санал, хэмжилтийн хуудас тийш хадгалагдана\n• Хуучин төсөлд ч эхний хадгалалтад фолдер автоматаар үүснэ\n• Зураг төслийн PDF-д задаргаа, тоноглолын хавсралт орохоо больсон\n• «Ашиг» таб хоосон гарч байсныг зассан (v5.3.1)\n• Хэмжилтийн хуудас — гараар зурж бөглөх хэвлэх маягт (v5.3.1)",
+  "notes_en": "v5.3.2 — Separate design quote\n\n• Design-service quotes are now a SEPARATE PDF from furniture costing\n• New project folder «10_SURVEY_RENDER» for design quotes and measurement sheets\n• The folder is created automatically for existing projects\n• Design PDFs no longer include cutlist or hardware pages\n• Fixed the empty «Profit» tab (v5.3.1)\n• Measurement sheet — printable hand-fill form (v5.3.1)"
 }
