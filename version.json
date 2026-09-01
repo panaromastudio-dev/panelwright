@@ -1,7 +1,7 @@
 {
-  "version": "5.3.2",
+  "version": "5.3.3",
   "url": "https://github.com/panaromastudio-dev/Furniture-Nesting-pro/releases/latest",
   "rbz": "https://github.com/panaromastudio-dev/Furniture-Nesting-pro/releases/latest/download/FurnitureNestingPro.rbz",
-  "notes": "v5.3.2 — Зураг төслийн үнийн санал ТУСДАА\n\n• Зураг төслийн үнийн санал одоо тавилгын өртгөөс ТУСДАА PDF\n• Төслийн шинэ фолдер «10_Хэмжилт_рендер_зураг» — зураг төслийн үнийн санал, хэмжилтийн хуудас тийш хадгалагдана\n• Хуучин төсөлд ч эхний хадгалалтад фолдер автоматаар үүснэ\n• Зураг төслийн PDF-д задаргаа, тоноглолын хавсралт орохоо больсон\n• «Ашиг» таб хоосон гарч байсныг зассан (v5.3.1)\n• Хэмжилтийн хуудас — гараар зурж бөглөх хэвлэх маягт (v5.3.1)",
-  "notes_en": "v5.3.2 — Separate design quote\n\n• Design-service quotes are now a SEPARATE PDF from furniture costing\n• New project folder «10_SURVEY_RENDER» for design quotes and measurement sheets\n• The folder is created automatically for existing projects\n• Design PDFs no longer include cutlist or hardware pages\n• Fixed the empty «Profit» tab (v5.3.1)\n• Measurement sheet — printable hand-fill form (v5.3.1)"
+  "notes": "v5.3.3 — Ирмэг хуулгын тооцоо ил тод боллоо\n\n• Үр дүн табд «Ирмэг хуулга — материалаар» шинэ хүснэгт: материал бүрийн жинхэнэ метр, тооцох метр, ₮/м ханш, дүн\n• Өртгийн мөрөнд «?» тэмдэг — хулгана аваачихад тооцооны задаргаа\n• Хорогдол (тал бүрд 40мм) хэдэн метр нэмсэнийг тусад нь харуулна\n• Тооцоо урьдын адил ЯГ 1 метр тутамд — өөрчлөгдөөгүй\n• Зураг төслийн үнийн санал тусдаа PDF, тусдаа фолдер (v5.3.2)",
+  "notes_en": "v5.3.3 — Transparent edge-banding calculation\n\n• New «Edge banding — by material» table in Results: actual metres, charged metres, ₮/m rate and amount per material\n• «?» hint on the cost row shows the full breakdown\n• Waste allowance (40mm per side) is shown separately\n• The maths is unchanged — still exactly per metre\n• Separate design-quote PDF and folder (v5.3.2)"
 }
