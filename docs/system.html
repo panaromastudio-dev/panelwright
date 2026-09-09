@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For shops and factories — how Panelwright runs a whole job</title>
+<meta name="description" content="How a cabinet shop runs Panelwright end to end: databases, design, calculation, shop floor, purchasing and stock, client paperwork, archive, profit, backup and team use.">
+<meta property="og:title" content="Panelwright for shops — the whole job, one system">
+<meta property="og:image" content="https://panelwright.app/assets/poster.jpg">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="9" fill="#232B36"/><rect x="11" y="12" width="16" height="40" rx="2" fill="#E8EBEE"/><rect x="30.5" y="12" width="22.5" height="17.5" rx="2" fill="#E8EBEE"/><rect x="30.5" y="33" width="22.5" height="19" rx="2" fill="#EC1D25"/></svg>
+    <span class="wm">Panel<span class="lt">wright</span></span>
+  </a>
+  <nav>
+    <a href="index.html#system">The system</a><a href="system.html" class="on">For shops</a><a href="index.html#cabinets">Cabinets</a>
+    <a href="index.html#cnc">CNC</a><a href="pricing.html">Pricing</a><a href="getting-started.html">Docs</a>
+  </nav>
+  <a class="btn red" href="pricing.html#trial">Start free trial</a>
+</div></header>
+
+<section class="hero" style="border-top:0;padding-bottom:24px">
+  <div class="wrap">
+    <div class="kicker">For shops and small factories</div>
+    <h1>One job, <em>end to end</em></h1>
+    <p class="lead">This page follows a single kitchen through the whole shop — the same way Panelwright does. Nothing below is a plan or a roadmap item; it is what the extension does today.</p>
+  </div>
+</section>
+
+<!-- DAY 0 -->
+<section id="setup">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Day 0 · once, before the first job</div>
+      <h2>Teach it <em>your</em> shop</h2>
+      <p>An afternoon of set-up, and every job afterwards inherits it. This is what makes the difference between a cut-list plugin and a system.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card big">
+        <h3>Material database</h3>
+        <p>Every board you buy: name, matching rule, price per sheet, sheet formats (more than one per material), grain direction, cutting cost per sheet, edge-band cost per metre. Edge bands with their own prices. Panelwright picks the cheapest format that fits the job and never rotates a grain-marked part.</p>
+      </div>
+      <div class="card big">
+        <h3>Hardware catalogue</h3>
+        <p>Hinges, slides, handles, legs, rails, lifts and connectors from Blum, Hettich, Häfele, Grass and Salice, with cup diameter and depth, plate pattern, slide lengths and prices. Add your own items, your own prices, and even your own .skp model so a part looks right in 3D.</p>
+      </div>
+      <div class="card big">
+        <h3>Shop standard</h3>
+        <p>Joinery — confirmat, Minifix, dowel, Cabineo or Domino — plus door gaps, plinth height and recess, back-panel thickness, minimum banding thickness, kerf, margins, drilling rules, and your labour, cutting, banding, CNC and assembly rates. Set once; every cabinet and every price follows it.</p>
+      </div>
+      <div class="card big">
+        <h3>Company and templates</h3>
+        <p>Your logo, company and bank details, tax ID, terms, warranty, lead time and payment split; A4 or Letter; the language documents come out in. Ready-made cabinet templates for the sizes you build most, so a designer places a module instead of filling a form.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN -->
+<section id="design">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="kicker">Step 1 · the designer</div>
+        <h2>Model in the morning</h2>
+        <p class="muted" style="font-size:17px">Generate cabinets and whole runs from wall lengths, drop in templates, or draw freely — Panelwright reads any group or component. Parts are named, so the cut list, drilling, hardware and costing all know what each panel is.</p>
+        <p class="muted" style="font-size:17px">Marks can be shown on screen — part numbers, sizes, banded edges in red — without adding a single line of geometry to the model.</p>
+        <div class="tags"><span class="tag">28 types</span><span class="tag">I / L / U runs</span><span class="tag">template library</span><span class="tag">editable after placing</span><span class="tag">glass &amp; framed doors</span><span class="tag">unfolds curved panels</span></div>
+      </div>
+      <div class="shot"><img src="assets/kitchen.png" alt="Kitchen run in SketchUp"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALC -->
+<section id="calc">
+  <div class="wrap">
+    <div class="split rev">
+      <div class="shot"><img src="assets/nesting.png" alt="Nesting result"></div>
+      <div>
+        <div class="kicker">Step 2 · one button</div>
+        <h2>Calculate</h2>
+        <p class="muted" style="font-size:17px">Parts are aggregated with their edge codes and grain. Sheets are nested per material and thickness — offcuts from earlier jobs first, then the cheapest new format — with kerf and margins. Hardware is counted from the model and named with brand, model and size, ready to order. Joinery connectors are counted from the joints themselves. Costing runs across materials, waste, banding, hardware, cutting, CNC, assembly, transport, margin and tax.</p>
+        <p class="muted" style="font-size:17px">Then the model check runs: parts bigger than the sheet, non-standard slide lengths, doors too wide for their hinges, missing materials, generic hardware names. It is cheaper to read a warning than to re-cut a door.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Step 3 · the shop floor</div>
+      <h2>What the cutter, the driller and the assembler <em>each get</em></h2>
+    </div>
+    <div class="grid g3">
+      <div class="card"><div class="ic">✂</div><h3>Cutting</h3><p>Sheet layouts with utilisation per sheet, part numbers on every piece, DXF per sheet or per part for the beam saw or the router, and true contours for round and shaped parts.</p></div>
+      <div class="card"><div class="ic">⌀</div><h3>Drilling</h3><p>System 32 drawings per part with every hole dimensioned from the corner: 35 mm hinge cups, plate screws, Ø5 shelf rows on a 32 mm pitch, and confirmat, Minifix or dowel holes to match your joinery. PDF for a manual driller, DXF for CNC.</p></div>
+      <div class="card"><div class="ic">▤</div><h3>Banding &amp; labels</h3><p>Banding metres per material and per part, with the L1/L2/W1/W2 code on each label. Labels carry the part number, size, material, edges and a barcode — one per row or one per piece.</p></div>
+      <div class="card"><div class="ic">☰</div><h3>Assembly</h3><p>Assembly sheets per unit with 3D views and part numbers, plus a hardware bag list and packing list so a unit leaves the shop complete.</p></div>
+      <div class="card"><div class="ic">▣</div><h3>Shop packet</h3><p>A single HTML file with the cut list, sheet layouts, banding, hardware and assembly — opens on any phone or tablet on the floor, with no internet and no app.</p></div>
+      <div class="card"><div class="ic">✓</div><h3>Nothing hand-written</h3><p>Every one of these carries the same part numbers, so a question on the floor is answered by pointing at a number, not by re-measuring.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PURCHASING -->
+<section id="purchasing">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Step 4 · materials</div>
+      <h2>Stock, offcuts and the <em>order you actually need</em></h2>
+    </div>
+    <div class="grid g3">
+      <div class="card"><h3>Stock with minimum levels</h3><p>Sheets, edge banding and hardware are registered with quantities and a minimum. Anything under the minimum is flagged.</p></div>
+      <div class="card"><h3>Deducted on confirmation</h3><p>Confirm a job and its materials leave stock automatically. A ledger guarantees one job is deducted once; if stock will not cover it you are warned and can continue anyway.</p></div>
+      <div class="card"><h3>Purchase order PDF</h3><p>What the job needs minus what you hold becomes an order for the supplier — with your company header, quantities and prices.</p></div>
+      <div class="card"><h3>Offcut store</h3><p>Usable leftovers from every job are registered with their size and material and are nested first on the next job, before any new sheet is opened.</p></div>
+      <div class="card"><h3>Packing lists</h3><p>Per unit: which hardware goes in which bag, which parts belong to which cabinet. Fewer second trips to site.</p></div>
+      <div class="card"><h3>Variant comparison</h3><p>Same drawing, different material or hardware — see all three prices side by side before you order anything.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT -->
+<section id="client">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="kicker">Step 5 · the client</div>
+        <h2>Quote in the meeting, <em>invoice the same day</em></h2>
+        <p class="muted" style="font-size:17px">Four quotation layouts — detailed, summary, by zone or by cabinet — plus a design-project quote with a printable measurement sheet. Advance percentage, lead time, warranty and validity come from your settings. When the job is agreed, the invoice is the same numbers with FROM / BILL TO, tax ID, IBAN / SWIFT, PO number and Net-30 terms; the contract comes as PDF and as an editable Word file.</p>
+        <p class="muted" style="font-size:17px">An e-mail draft opens with the documents already attached, in the client's language.</p>
+      </div>
+      <div class="grid g2">
+        <div class="shot"><img src="assets/quote.png" alt="Quotation PDF"></div>
+        <div class="shot"><img src="assets/invoice.png" alt="Invoice PDF"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTROL -->
+<section id="control">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Step 6 · after the job</div>
+      <h2>Did it actually <em>make money?</em></h2>
+      <p>The part most shops never close. Panelwright keeps the plan, you enter the reality, and it shows you the gap.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card big"><h3>Archive and MASTER file</h3><p>Every job gets a project code and its own folder structure. Archived jobs are collected into one MASTER Excel file — every job, its materials, hardware, hours and totals in one sheet you can filter, chart or hand to an accountant.</p></div>
+      <div class="card big"><h3>Planned versus actual</h3><p>When the job was archived, the plan was frozen. Afterwards you enter what really happened: sheets used, hardware bought, hours worked, extra costs, the price you actually received. The report shows the difference line by line — where the estimate was wrong and by how much.</p></div>
+      <div class="card big"><h3>Backup and restore</h3><p>One file holds prices, hardware, company and client data, the project archive, the offcut store and every setting. It is written automatically before a reset or a restore, so a mis-click never costs you a year of price work.</p></div>
+      <div class="card big"><h3>A team on one folder</h3><p>Point several seats at one shared folder — network drive, local server or a synced folder. File locking, atomic writes and re-read-merge mean two people saving at the same moment cannot lose each other's changes.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST -->
+<section id="scope">
+  <div class="wrap narrow">
+    <div class="sec-head"><div class="kicker">Being straight with you</div><h2>What it is <em>not</em></h2></div>
+    <div class="callout" style="margin-bottom:16px"><p><b>Not a factory MRP.</b> There is no machine scheduling, no shift planning, no barcode terminals on the line and no multi-site server. If you run three shifts on a Homag line, this is not your production planner.</p></div>
+    <div class="callout" style="margin-bottom:16px"><p><b>Not an accounting system.</b> It writes invoices and tracks job profit; it does not file your tax return or talk to your accounting software. The MASTER Excel file is what your accountant gets.</p></div>
+    <div class="callout" style="margin-bottom:16px"><p><b>Not a cloud service.</b> No account, no sync, no web dashboard. That is deliberate — your prices and clients stay on your disk — but it also means sharing between offices is your network's job, not ours.</p></div>
+    <div class="callout"><p><b>It is</b> the complete working system for a one- to twenty-person cabinet shop: design, production, materials, paperwork and money, sharing one set of data, inside the program your designer already uses.</p></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="band">
+      <h2>Run one real job through it</h2>
+      <p>Ten days, every feature, no card. Model a kitchen you have already built and compare the numbers with what it actually cost you.</p>
+      <div class="cta"><a class="btn red lg" href="pricing.html#trial">Start free 10-day trial</a><a class="btn lg" href="pricing.html">See pricing</a></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><span class="brand"><span class="wm">Panel<span class="lt">wright</span></span></span><p class="muted" style="margin-top:10px;max-width:340px">The complete production system for cabinet and furniture shops, inside SketchUp. Made by Panorama Studio, Ulaanbaatar.</p></div>
+    <div><b>Product</b><a href="index.html#system">The system</a><a href="system.html">For shops</a><a href="pricing.html">Pricing</a><a href="getting-started.html">Documentation</a></div>
+    <div><b>Support</b><a href="activate.html">Get your licence key</a><a href="mailto:support@panelwright.app">support@panelwright.app</a><a href="faq.html">FAQ</a><a href="costing.html">Costing</a></div>
+    <div><b>Legal</b><a href="eula.html">Licence agreement</a><a href="privacy.html">Privacy</a></div>
+  </div>
+  <div class="copy"><span>© 2026 Panorama Studio. All rights reserved.</span><span>SketchUp is a trademark of Trimble Inc.</span></div>
+</div></footer>
+
+</body>
+</html>

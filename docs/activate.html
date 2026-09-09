@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get your licence key — Panelwright</title>
+<meta name="description" content="Turn your Panelwright order into a licence key for your computer. Takes about a second, any time of day.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+.act{max-width:680px;margin:0 auto;padding:56px 24px 96px}
+.act h1{font-size:38px;margin-bottom:14px}
+.act .lead{margin-bottom:34px}
+.field{margin-bottom:20px}
+.field label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+.field .hint{font-size:13.5px;color:var(--faint);margin-bottom:8px}
+.field input{width:100%;padding:13px 15px;border-radius:10px;border:1px solid var(--line2);
+  background:var(--bg2);color:var(--ink);font:15px/1.4 "IBM Plex Mono",monospace;letter-spacing:.02em}
+.field input:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(236,29,37,.15)}
+.field input::placeholder{color:#4C5763;letter-spacing:0}
+#go{width:100%;margin-top:6px}
+#go[disabled]{opacity:.55;cursor:not-allowed}
+.out{margin-top:28px}
+.keybox{background:var(--bg2);border:1px solid var(--line2);border-radius:10px;padding:16px;
+  font:13.5px/1.55 "IBM Plex Mono",monospace;word-break:break-all;color:#CFE8DC;max-height:190px;overflow:auto}
+.row{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.ok{border-left:3px solid var(--green)}
+.bad{border-left:3px solid var(--red)}
+.meta{font-size:14px;color:var(--muted);margin-top:12px}
+.meta b{color:var(--ink)}
+.steps2{counter-reset:n;list-style:none;padding:0;margin:0 0 34px}
+.steps2 li{counter-increment:n;position:relative;padding:0 0 14px 38px;color:var(--muted);font-size:15px}
+.steps2 li::before{content:counter(n);position:absolute;left:0;top:-1px;width:25px;height:25px;border-radius:50%;
+  background:var(--red-soft);border:1px solid rgba(236,29,37,.35);color:var(--red2);
+  display:grid;place-items:center;font-size:12.5px;font-weight:700;font-family:Archivo,sans-serif}
+.steps2 b{color:var(--ink)}
+.spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(255,255,255,.28);
+  border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;vertical-align:-2px;margin-right:8px}
+@keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="9" fill="#232B36"/><rect x="11" y="12" width="16" height="40" rx="2" fill="#E8EBEE"/><rect x="30.5" y="12" width="22.5" height="17.5" rx="2" fill="#E8EBEE"/><rect x="30.5" y="33" width="22.5" height="19" rx="2" fill="#EC1D25"/></svg>
+    <span class="wm">Panel<span class="lt">wright</span></span>
+  </a>
+  <nav>
+    <a href="system.html">For shops</a><a href="pricing.html">Pricing</a><a href="getting-started.html">Docs</a>
+  </nav>
+  <a class="btn" href="mailto:support@panelwright.app">Support</a>
+</div></header>
+
+<main class="act">
+  <div class="kicker">After your purchase</div>
+  <h1>Get your licence key</h1>
+  <p class="lead">Your key is tied to one computer, so it is made after you install — not at checkout. This takes about a second.</p>
+
+  <ol class="steps2">
+    <li><b>Install Panelwright</b> — the <code>.rbz</code> came with your order e-mail. In SketchUp: Extensions → Extension Manager → Install Extension.</li>
+    <li><b>Open</b> Extensions → Panelwright → <b>Licence</b>, and copy the <b>Computer ID</b> shown there.</li>
+    <li><b>Paste both below.</b> Your key appears on this page — enter it in that same Licence window.</li>
+  </ol>
+
+  <form id="f" autocomplete="off">
+    <div class="field">
+      <label for="lk">Order licence key</label>
+      <div class="hint">From your purchase e-mail — looks like <code>2C4A1B9E-7F3D-4A21-B8C6-9E1D5F0A3C7B</code>.</div>
+      <input id="lk" name="lk" required spellcheck="false" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX">
+    </div>
+    <div class="field">
+      <label for="mid">Computer ID</label>
+      <div class="hint">From Extensions → Panelwright → Licence, inside SketchUp.</div>
+      <input id="mid" name="mid" required spellcheck="false" placeholder="ABCDE-FGHIJ-KLMNO-PQRST-UVWXY-Z2345-67">
+    </div>
+    <button class="btn red lg" id="go" type="submit">Get my licence key</button>
+  </form>
+
+  <div class="out" id="out" hidden></div>
+
+  <div class="callout" style="margin-top:40px">
+    <p><b>Changing computers?</b> Use the same page on the new machine. If your seats are all used, write to
+    <a href="mailto:support@panelwright.app" style="color:var(--red2)">support@panelwright.app</a> and the old one is released.
+    <b>Lost your key?</b> Enter the same two values again — you get the same key back, and it does not use another seat.</p>
+  </div>
+</main>
+
+<footer><div class="wrap"><div class="copy" style="border-top:0;padding-top:0">
+  <span>© 2026 Panorama Studio. All rights reserved.</span>
+  <span>SketchUp is a trademark of Trimble Inc. Panelwright is an independent product.</span>
+</div></div></footer>
+
+<script>
+(function () {
+  // Set this to your deployed Worker URL.
+  var API = 'https://panelwright-license.<YOUR-SUBDOMAIN>.workers.dev';
+
+  var f = document.getElementById('f'),
+      go = document.getElementById('go'),
+      out = document.getElementById('out'),
+      lk = document.getElementById('lk'),
+      mid = document.getElementById('mid');
+
+  var MESSAGES = {
+    invalid_license_key: 'We could not find that order key. Check it against your purchase e-mail — it is the long key, not the order number.',
+    subscription_expired: 'That subscription has ended. Renew it and this page will work again straight away.',
+    license_disabled: 'That key has been disabled. Write to support@panelwright.app and we will sort it out.',
+    activation_limit_reached: 'Every computer on this licence is already in use.',
+    bad_machine_id: 'That does not look like a Computer ID. Copy it from Extensions → Panelwright → Licence.',
+    missing_license_key: 'Enter the licence key from your order e-mail.',
+    rate_limited: 'Too many attempts. Wait a few minutes and try again.',
+    license_service_unavailable: 'The payment provider is not responding right now. Try again in a minute.',
+    server_not_configured: 'Something is wrong on our side. Write to support@panelwright.app.',
+    server_error: 'Something went wrong. Write to support@panelwright.app and we will send your key by hand.'
+  };
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function fail(msg, detail) {
+    out.hidden = false;
+    out.innerHTML = '<div class="callout bad"><p><b>' + esc(msg) + '</b>'
+      + (detail ? '<br><span class="small">' + esc(detail) + '</span>' : '')
+      + '<br><span class="small">Still stuck? <a href="mailto:support@panelwright.app" style="color:var(--red2)">support@panelwright.app</a> — a person answers.</span></p></div>';
+    out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function succeed(d) {
+    var when = d.expires
+      ? 'Valid until <b>' + esc(d.expires) + '</b>'
+      : 'This key <b>never expires</b>';
+    var seats = (d.seats_total)
+      ? ' · Computers used: <b>' + esc(d.seats_used) + ' of ' + esc(d.seats_total) + '</b>' : '';
+    out.hidden = false;
+    out.innerHTML =
+      '<div class="callout ok"><p><b>' + (d.reissued ? 'Here is your key again.' : 'Your licence key is ready.')
+      + '</b><br><span class="small">Copy it into SketchUp → Extensions → Panelwright → Licence, and press Activate.</span></p></div>'
+      + '<div class="keybox" id="kb">' + esc(d.key) + '</div>'
+      + '<div class="row"><button class="btn" type="button" id="cp">Copy key</button>'
+      + '<button class="btn" type="button" id="dl">Save as a file</button></div>'
+      + '<div class="meta">' + when + seats + '</div>';
+
+    document.getElementById('cp').onclick = function () {
+      var b = this;
+      navigator.clipboard.writeText(d.key).then(function () {
+        b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy key'; }, 1800);
+      }, function () {
+        var r = document.createRange(); r.selectNodeContents(document.getElementById('kb'));
+        var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = 'Press Ctrl+C';
+      });
+    };
+    document.getElementById('dl').onclick = function () {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob(
+        ['Panelwright licence key\r\nComputer ID: ' + mid.value.trim().toUpperCase() +
+         '\r\n' + (d.expires ? 'Valid until: ' + d.expires : 'Never expires') +
+         '\r\n\r\n' + d.key + '\r\n'], { type: 'text/plain' }));
+      a.download = 'panelwright-licence.txt';
+      document.body.appendChild(a); a.click(); a.remove();
+    };
+    out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  f.onsubmit = function (e) {
+    e.preventDefault();
+    out.hidden = true;
+    go.disabled = true;
+    go.innerHTML = '<span class="spin"></span>Checking your order…';
+
+    fetch(API + '/activate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        license_key: lk.value.trim(),
+        machine_id: mid.value.trim().toUpperCase()
+      })
+    }).then(function (r) {
+      return r.json().then(function (d) { return { ok: r.ok, d: d }; });
+    }).then(function (res) {
+      if (res.ok && res.d.key) succeed(res.d);
+      else fail(MESSAGES[res.d.error] || 'Something went wrong.',
+                res.d.error === 'activation_limit_reached' ? res.d.detail : null);
+    }).catch(function () {
+      fail('Could not reach the licence server. Check your internet connection and try again.');
+    }).then(function () {
+      go.disabled = false;
+      go.textContent = 'Get my licence key';
+    });
+  };
+})();
+</script>
+</body>
+</html>

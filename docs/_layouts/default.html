@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} — Panelwright{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="icon" href="{{ '/assets/icon.png' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="{{ '/' | relative_url }}">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="9" fill="#232B36"/><rect x="11" y="12" width="16" height="40" rx="2" fill="#E8EBEE"/><rect x="30.5" y="12" width="22.5" height="17.5" rx="2" fill="#E8EBEE"/><rect x="30.5" y="33" width="22.5" height="19" rx="2" fill="#EC1D25"/></svg>
+    <span class="wm">Panel<span class="lt">wright</span></span>
+  </a>
+  <nav>
+    <a href="{{ '/system.html' | relative_url }}">For shops</a>
+    <a href="{{ '/pricing.html' | relative_url }}">Pricing</a>
+    <a href="{{ '/getting-started.html' | relative_url }}" class="on">Docs</a>
+  </nav>
+  <a class="btn red" href="{{ '/pricing.html#trial' | relative_url }}">Start free trial</a>
+</div></header>
+
+<div class="docwrap wrap">
+  <aside class="docnav">
+    <b>Documentation</b>
+    <a href="{{ '/getting-started.html' | relative_url }}"{% if page.url contains '/getting-started' %} class="here"{% endif %}>Getting started</a>
+    <a href="{{ '/cabinets.html' | relative_url }}"{% if page.url contains '/cabinets' %} class="here"{% endif %}>Creating cabinets</a>
+    <a href="{{ '/costing.html' | relative_url }}"{% if page.url contains '/costing' %} class="here"{% endif %}>Costing</a>
+    <a href="{{ '/documents.html' | relative_url }}"{% if page.url contains '/documents' %} class="here"{% endif %}>Documents</a>
+    <a href="{{ '/export.html' | relative_url }}"{% if page.url contains '/export' %} class="here"{% endif %}>Export &amp; CNC</a>
+    <a href="{{ '/units-languages.html' | relative_url }}"{% if page.url contains '/units-languages' %} class="here"{% endif %}>Units &amp; languages</a>
+    <a href="{{ '/license.html' | relative_url }}"{% if page.url contains '/license' %} class="here"{% endif %}>Licence &amp; activation</a>
+    <a href="{{ '/faq.html' | relative_url }}"{% if page.url contains '/faq' %} class="here"{% endif %}>FAQ</a>
+    <b style="margin-top:22px">Legal</b>
+    <a href="{{ '/eula.html' | relative_url }}"{% if page.url contains '/eula' %} class="here"{% endif %}>Licence agreement</a>
+    <a href="{{ '/privacy.html' | relative_url }}"{% if page.url contains '/privacy' %} class="here"{% endif %}>Privacy policy</a>
+  </aside>
+  <article class="doc">
+    {{ content }}
+  </article>
+</div>
+
+<footer><div class="wrap">
+  <div class="copy" style="border-top:0;padding-top:0">
+    <span>© 2026 Panorama Studio. All rights reserved.</span>
+    <span>SketchUp is a trademark of Trimble Inc. Panelwright is an independent product.</span>
+  </div>
+</div></footer>
+
+</body>
+</html>

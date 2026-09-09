@@ -1,0 +1,17 @@
+title: Panelwright
+description: The complete production system for cabinet and furniture shops, inside SketchUp — parametric cabinets, cut lists, nesting, CNC files, material and hardware databases, stock, purchasing, shop paperwork, client documents, archive and profit.
+url: https://panelwright.app
+
+# Custom dark layout in _layouts/default.html — no external theme.
+defaults:
+  - scope: { path: "" }
+    values: { layout: "default" }
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude: [Gemfile, Gemfile.lock, vendor]
+
+# GitHub Pages: Settings → Pages → Source: main / docs
