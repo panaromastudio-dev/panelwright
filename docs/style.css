@@ -10,7 +10,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-img,video,svg{max-width:100%;display:block}
+img,video,svg{max-width:100%;height:auto;display:block}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 .narrow{max-width:840px}
 h1,h2,h3,h4{font-family:Archivo,Inter,sans-serif;letter-spacing:-.022em;line-height:1.14;margin:0}
@@ -139,7 +139,16 @@ footer a:hover{color:var(--ink)}
   h1{font-size:36px} h2{font-size:28px} .hero{padding:56px 0 30px}
   .g3,.g4,.g2,.plans,.split,.stats,footer .cols{grid-template-columns:1fr}
   .split.rev>div:first-child{order:0}
-  .nav nav{display:none}
+  /* nav becomes a scrollable second row instead of disappearing */
+  .nav .wrap{flex-wrap:wrap;height:auto;gap:12px;padding-top:11px}
+  .brand{font-size:19px}
+  .brand svg{width:26px;height:26px}
+  .nav .btn{margin-left:auto;padding:9px 15px;font-size:14px}
+  .nav nav{display:flex;order:3;width:100%;margin-left:0;gap:20px;
+    overflow-x:auto;padding:9px 0 10px;border-top:1px solid var(--line);
+    scrollbar-width:none;-ms-overflow-style:none}
+  .nav nav::-webkit-scrollbar{display:none}
+  .nav nav a{white-space:nowrap}
   section{padding:56px 0}
   .band{padding:32px 20px}
   .pillar{grid-template-columns:1fr}
@@ -179,4 +188,323 @@ footer a:hover{color:var(--ink)}
   .docnav b{width:100%;margin-bottom:4px}
   .docnav a{margin-left:0;padding-left:0;border-left:0}
   .doc h1{font-size:30px}
+}
+
+/* =========================================================================
+   PRODUCT-LED LAYOUT  (index.html)
+   Big product imagery leads, copy stays short. Additive — every class above
+   still works, so system.html, pricing.html and the docs layout are untouched.
+   ========================================================================= */
+:root{ --stage:#0E1216; --edge:#1E252D; }
+
+/* --- hero --- */
+.phero{padding:74px 0 0;text-align:center;position:relative;border-top:0}
+.phero .wrap{position:relative}
+.phero .kicker{margin-bottom:18px}
+.phero h1{font-size:clamp(38px,5.4vw,62px);line-height:1.04;letter-spacing:-.03em;
+  max-width:15ch;margin:0 auto 20px}
+.phero .lead{font-size:19px;line-height:1.55;max-width:52ch;margin:0 auto 28px;color:var(--muted)}
+.phero .cta{margin-bottom:12px}
+
+/* the one big characteristic object */
+.stage{margin:52px auto 0;max-width:1180px;position:relative}
+.phero .stage{max-width:1060px}
+.stage::before{content:"";position:absolute;inset:-14% 6% auto 6%;height:70%;
+  background:radial-gradient(ellipse at 50% 0%,rgba(236,29,37,.13),transparent 70%);
+  pointer-events:none;z-index:0}
+.stage figure{margin:0;position:relative;z-index:1;border:1px solid var(--edge);
+  border-radius:14px;overflow:hidden;background:var(--stage);
+  box-shadow:0 40px 110px -40px rgba(0,0,0,.95)}
+.stage img,.stage video{display:block;width:100%;height:auto}
+.stage figcaption{font-size:13.5px;color:var(--faint);text-align:center;
+  margin-top:14px;position:relative;z-index:1}
+
+/* --- four claims, minimal copy --- */
+.claims{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:56px 0 0;
+  border-top:1px solid var(--line)}
+.claims > div{padding:26px 24px 4px;border-right:1px solid var(--line)}
+.claims > div:last-child{border-right:0}
+.claims b{display:block;font-family:Archivo,sans-serif;font-size:19px;font-weight:600;
+  color:var(--ink);margin-bottom:7px;letter-spacing:-.01em}
+.claims p{font-size:14.5px;color:var(--muted);margin:0;line-height:1.55}
+
+/* --- breadth through density --- */
+.dense{display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;margin-top:26px}
+.dense span{background:var(--card);padding:13px 16px;font-size:14px;color:var(--muted);
+  display:flex;align-items:center;gap:9px;min-height:46px}
+.dense span::before{content:"";width:5px;height:5px;border-radius:1px;
+  background:var(--line2);flex:0 0 auto}
+.dense span.n::before{background:var(--red)}
+.dense span.n{color:var(--ink)}
+
+/* --- alternating showcase --- */
+.show{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:center;
+  padding:26px 0}
+.show.rev > .txt{order:2}
+.show .txt h3{font-size:27px;letter-spacing:-.02em;margin-bottom:12px;line-height:1.15}
+.show .txt p{color:var(--muted);font-size:16px}
+.show .txt p:last-child{margin-bottom:0}
+.show figure{margin:0;border:1px solid var(--edge);border-radius:12px;overflow:hidden;
+  background:var(--stage);box-shadow:0 26px 70px -34px rgba(0,0,0,.9)}
+.show figure img{display:block;width:100%;height:auto}
+.numline{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;padding-top:18px;
+  border-top:1px solid var(--line)}
+.numline div b{display:block;font-family:Archivo,sans-serif;font-size:23px;
+  color:var(--ink);font-weight:700;letter-spacing:-.02em}
+.numline div span{font-size:13px;color:var(--faint)}
+
+/* --- three documents, shown large --- */
+.papers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:26px}
+.papers figure{margin:0;border:1px solid var(--edge);border-radius:10px;overflow:hidden;
+  background:#fff;box-shadow:0 22px 56px -30px rgba(0,0,0,.9)}
+.papers img{display:block;width:100%;height:auto}
+.papers figcaption{background:var(--card);border-top:1px solid var(--edge);
+  padding:11px 14px;font-size:13px;color:var(--muted)}
+.papers figcaption b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
+
+/* --- quiet strip --- */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:26px 34px;padding:30px 0}
+.strip h4{font-size:15.5px;margin-bottom:7px}
+.strip p{font-size:14.5px;color:var(--muted);margin:0}
+
+@media (max-width:1080px){ .dense{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:720px){ .dense{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:430px){ .dense span{padding:11px 12px;font-size:13px;min-height:42px} }
+
+@media (max-width:900px){
+  .claims{grid-template-columns:repeat(2,1fr)}
+  .claims > div:nth-child(2){border-right:0}
+  .claims > div:nth-child(3),.claims > div:nth-child(4){border-top:1px solid var(--line)}
+  .show{grid-template-columns:1fr;gap:26px;padding:18px 0}
+  .show.rev > .txt{order:0}
+  .papers{grid-template-columns:1fr}
+  .stage{margin-top:36px}
+  .phero{padding-top:46px}
+}
+
+/* =========================================================================
+   MOTION · DEPTH · INTERACTION
+   Adds transitions, hover states, shadows, scroll reveals and micro-motion
+   to the classes that already exist. No colour tokens are changed.
+   Everything degrades to the plain page when JS is off or when the visitor
+   asks for reduced motion.
+   ========================================================================= */
+
+/* ---- easing + shared tokens ---- */
+:root{
+  --ease:cubic-bezier(.22,.68,.24,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --lift:0 22px 48px -22px rgba(0,0,0,.85);
+  --lift-hi:0 30px 64px -24px rgba(0,0,0,.9);
+  --ring:0 0 0 1px var(--line2);
+}
+
+/* ---- film grain, fixed over everything, never blocks clicks ---- */
+body::after{
+  content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.032;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---- scroll reveal ---- */
+@media (prefers-reduced-motion:no-preference){
+  .js [data-rv]{opacity:0;transform:translate3d(0,22px,0);
+    transition:opacity .8s var(--ease-out),transform .8s var(--ease-out);
+    transition-delay:var(--rvd,0ms);will-change:opacity,transform}
+  .js [data-rv].in{opacity:1;transform:none}
+  .js [data-rv="s"]{transform:translate3d(0,14px,0) scale(.985)}
+  .js [data-rv="l"]{transform:translate3d(-26px,0,0)}
+  .js [data-rv="r"]{transform:translate3d(26px,0,0)}
+}
+
+/* ---- nav: condenses and darkens once you leave the top ---- */
+.nav{transition:height .3s var(--ease),background .3s var(--ease),box-shadow .3s var(--ease),
+  border-color .3s var(--ease)}
+.nav .wrap{transition:height .3s var(--ease)}
+.js .nav.stuck{background:rgba(12,16,20,.92);box-shadow:0 10px 30px -20px rgba(0,0,0,.9)}
+.js .nav.stuck .wrap{height:56px}
+.nav nav a{position:relative;transition:color .2s var(--ease)}
+.nav nav a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1.5px;
+  background:var(--red);transform:scaleX(0);transform-origin:left;
+  transition:transform .28s var(--ease);border-radius:2px}
+.nav nav a:hover::after,.nav nav a.on::after{transform:scaleX(1)}
+/* thin scroll-progress line under the header */
+.js .nav::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:100%;
+  background:linear-gradient(90deg,var(--red),var(--red2));
+  transform:scaleX(var(--sp,0));transform-origin:left;transition:transform .1s linear}
+
+/* ---- buttons ---- */
+.btn{position:relative;overflow:hidden;
+  transition:transform .18s var(--ease),box-shadow .22s var(--ease),
+    background .18s var(--ease),border-color .18s var(--ease)}
+.btn::before{content:"";position:absolute;top:0;left:-140%;width:60%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.16),transparent);
+  transform:skewX(-18deg);transition:left .6s var(--ease)}
+.btn:hover::before{left:150%}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.985);transition-duration:.06s}
+.btn.red{box-shadow:0 10px 26px -12px rgba(236,29,37,.75)}
+.btn.red:hover{box-shadow:0 18px 40px -14px rgba(236,29,37,.85)}
+.btn:not(.red):hover{box-shadow:var(--lift)}
+.btn:focus-visible{outline:2px solid var(--red2);outline-offset:3px}
+
+/* ---- hero: two slow-drifting light pools behind the headline ---- */
+.phero{overflow:hidden}
+.phero::after{content:"";position:absolute;inset:-260px 0 auto 50%;
+  width:1180px;height:720px;transform:translateX(-50%);pointer-events:none;z-index:0;
+  background:
+    radial-gradient(38% 46% at 32% 34%,rgba(236,29,37,.20),transparent 70%),
+    radial-gradient(34% 40% at 70% 26%,rgba(91,155,213,.10),transparent 72%);
+  filter:blur(14px)}
+@media (prefers-reduced-motion:no-preference){
+  .phero::after{animation:drift 22s var(--ease) infinite alternate}
+}
+@keyframes drift{
+  0%  {transform:translateX(-50%) translateY(0)      scale(1)}
+  50% {transform:translateX(-46%) translateY(14px)   scale(1.06)}
+  100%{transform:translateX(-54%) translateY(-10px)  scale(1.02)}
+}
+.phero h1,.phero .lead,.phero .cta,.phero .note,.phero .kicker{position:relative;z-index:1}
+/* the accent words carry a narrow highlight that sweeps across.
+   Guarded by @supports so the text can never go invisible: without
+   background-clip:text it simply stays solid red. */
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  @media (prefers-reduced-motion:no-preference){
+    h1 em,h2 em{
+      background-image:linear-gradient(100deg,
+        var(--red2) 0%,var(--red2) 43%,#FF9DA1 50%,var(--red2) 57%,var(--red2) 100%);
+      background-size:300% 100%;background-position:100% 0;
+      -webkit-background-clip:text;background-clip:text;
+      -webkit-text-fill-color:transparent;color:transparent;
+      animation:sheen 6.5s linear infinite}
+  }
+}
+@keyframes sheen{to{background-position:-200% 0}}
+
+/* ---- the big product stage ---- */
+.stage figure{transition:transform .5s var(--ease),box-shadow .5s var(--ease),
+  border-color .4s var(--ease)}
+.stage figure:hover{transform:translateY(-4px);border-color:var(--line2);
+  box-shadow:0 50px 130px -42px rgba(0,0,0,1),0 0 0 1px rgba(236,29,37,.14)}
+.stage img,.stage video{transition:transform .7s var(--ease)}
+.stage figure:hover img{transform:scale(1.012)}
+
+/* ---- four claims: a red rule grows in on hover ---- */
+.claims > div{position:relative;transition:background .3s var(--ease)}
+.claims > div::before{content:"";position:absolute;left:0;top:-1px;height:2px;width:100%;
+  background:var(--red);transform:scaleX(0);transform-origin:left;
+  transition:transform .4s var(--ease)}
+.claims > div:hover::before{transform:scaleX(1)}
+.claims > div:hover{background:linear-gradient(180deg,rgba(255,255,255,.022),transparent 62%)}
+.claims b{transition:color .25s var(--ease)}
+
+/* ---- dense grid: cursor spotlight + per-cell hover ---- */
+.dense{position:relative}
+.dense::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  border-radius:12px;opacity:0;transition:opacity .35s var(--ease);
+  background:radial-gradient(190px circle at var(--mx,50%) var(--my,50%),
+    rgba(236,29,37,.13),transparent 62%)}
+.dense:hover::before{opacity:1}
+.dense span{transition:background .22s var(--ease),color .22s var(--ease),
+  transform .22s var(--ease)}
+.dense span:hover{background:var(--card2);color:var(--ink)}
+.dense span::before{transition:background .22s var(--ease),transform .22s var(--ease)}
+.dense span:hover::before{background:var(--red);transform:scale(1.5)}
+
+/* ---- alternating showcase ---- */
+.show figure{transition:transform .5s var(--ease),box-shadow .5s var(--ease),
+  border-color .4s var(--ease)}
+.show figure:hover{transform:translateY(-5px);border-color:var(--line2);
+  box-shadow:0 34px 84px -34px rgba(0,0,0,1)}
+
+/* ---- the three documents: fan up on hover ---- */
+.papers figure{transition:transform .45s var(--ease),box-shadow .45s var(--ease)}
+.papers figure:hover{transform:translateY(-8px) rotate(-.35deg);
+  box-shadow:0 40px 84px -30px rgba(0,0,0,1)}
+.papers:hover figure:not(:hover){opacity:.82;transition:opacity .45s var(--ease)}
+.papers figcaption{transition:background .3s var(--ease)}
+.papers figure:hover figcaption{background:var(--card2)}
+
+/* ---- cards, plans, pillars, steps ---- */
+.card,.plan{position:relative;overflow:hidden;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+.card::before,.plan::before{content:"";position:absolute;inset:0;pointer-events:none;
+  opacity:0;transition:opacity .35s var(--ease);
+  background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),
+    rgba(236,29,37,.10),transparent 60%)}
+.card:hover::before,.plan:hover::before{opacity:1}
+.card:hover,.plan:hover{transform:translateY(-4px);border-color:var(--line2);
+  box-shadow:var(--lift)}
+.plan.best{transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.plan.best:hover{box-shadow:0 0 0 1px var(--red) inset,0 26px 60px -24px rgba(236,29,37,.5)}
+.card .ic{transition:transform .3s var(--ease),color .3s var(--ease),
+  border-color .3s var(--ease),background .3s var(--ease)}
+.card:hover .ic{transform:translateY(-2px) rotate(-4deg);border-color:rgba(236,29,37,.45);
+  background:var(--red-soft)}
+.pillar,.step{transition:background .3s var(--ease)}
+.pillar:hover,.step:hover{background:linear-gradient(90deg,rgba(255,255,255,.02),transparent 70%)}
+.pillar .no,.step .n{transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.pillar:hover .no{transform:scale(1.06)}
+.step:hover .n{transform:scale(1.08);box-shadow:0 8px 22px -8px rgba(236,29,37,.8)}
+.tag{transition:background .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease)}
+.tag:hover{background:var(--red-soft);border-color:rgba(236,29,37,.4);color:var(--ink)}
+
+/* ---- numbers ---- */
+.numline div,.stat{transition:transform .3s var(--ease)}
+.numline div:hover,.stat:hover{transform:translateY(-3px)}
+.stat{transition:transform .3s var(--ease),border-color .3s var(--ease),
+  box-shadow .3s var(--ease)}
+.stat:hover{border-color:var(--line2);box-shadow:var(--lift)}
+.numline b,.stat b{font-variant-numeric:tabular-nums}
+
+/* ---- comparison table ---- */
+.tbl{transition:box-shadow .3s var(--ease),border-color .3s var(--ease)}
+.tbl:hover{border-color:var(--line2);box-shadow:var(--lift)}
+tbody tr{transition:background .18s var(--ease)}
+tbody tr:hover{background:rgba(255,255,255,.024)}
+
+/* ---- faq ---- */
+details{transition:background .25s var(--ease),padding .25s var(--ease)}
+details:hover{background:linear-gradient(90deg,rgba(255,255,255,.02),transparent 65%)}
+summary{transition:color .2s var(--ease)}
+summary:hover{color:var(--red2)}
+summary::after{transition:transform .28s var(--ease),color .2s var(--ease);display:inline-block}
+details[open] summary::after{transform:rotate(180deg)}
+@media (prefers-reduced-motion:no-preference){
+  details[open] p{animation:unfold .38s var(--ease-out) both}
+}
+@keyframes unfold{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* ---- closing band ---- */
+.band{position:relative;overflow:hidden;
+  transition:border-color .4s var(--ease),box-shadow .4s var(--ease)}
+.band::before{content:"";position:absolute;inset:-60% 20% auto 20%;height:120%;
+  background:radial-gradient(ellipse at 50% 0%,rgba(236,29,37,.16),transparent 66%);
+  pointer-events:none}
+.band:hover{border-color:var(--line2);box-shadow:0 40px 100px -46px rgba(236,29,37,.5)}
+.band > *{position:relative}
+
+/* ---- strip + footer links ---- */
+.strip > div{transition:transform .3s var(--ease)}
+.strip > div:hover{transform:translateY(-3px)}
+.strip h4{transition:color .25s var(--ease)}
+footer a{transition:color .2s var(--ease),transform .2s var(--ease)}
+footer a:hover{transform:translateX(3px)}
+
+/* ---- docs sidebar ---- */
+.docnav a{transition:color .2s var(--ease),border-color .2s var(--ease),
+  padding-left .2s var(--ease)}
+.docnav a:hover{padding-left:16px;border-left-color:var(--line2)}
+.doc img{transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.doc img:hover{transform:translateY(-3px);box-shadow:var(--lift)}
+
+/* ---- anchors land below the sticky header ---- */
+:target,section[id]{scroll-margin-top:86px}
+
+/* ---- respect the visitor's setting ---- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.001ms!important;scroll-behavior:auto!important}
 }
