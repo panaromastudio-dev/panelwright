@@ -37,14 +37,16 @@ Choose hinges and slides from **Hardware → Catalogue**. The catalogue contains
 
 Drawer box widths are derived from the slide's side clearance automatically.
 
-## Kitchen runs from a plan
+## Building a kitchen
 
-**Create furniture → Kitchen plan** lets you lay out a whole run:
+Cabinets are created one at a time, the way they are built in the workshop — each unit is its own component, so you can move, copy and swap it without disturbing anything next to it.
 
-1. Enter wall lengths (straight, L or U shape).
-2. Add cabinets left to right with their widths; the plugin fills fillers automatically.
-3. Choose plinth (continuous, up to 2400 mm per piece), Gola profile, splashback and a single-slab worktop with standard hob (560 × 490) and sink (780 × 480) cut-outs.
-4. **Create in 3D model** builds the full run aligned to the back wall, with a low 360 mm unit and hood above the hob.
+1. Pick a type from the palette (kitchen, appliance, corner, other).
+2. Set width, height and depth, plus doors, drawers and shelves. Choosing a type loads its standard sizes first, so most cabinets need one or two changes.
+3. Press **Create**. The cabinet appears at the model origin as a single component — move it into place with SketchUp's own Move tool.
+4. Build the lower row first, then the upper row, each as separate units.
+
+**Read selected** loads an existing cabinet's parameters back into the form, and **Edit selected** rebuilds it with your changes.
 
 ## Editing after creation
 
