@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PANORAMA Shape - free SketchUp extension | Panelwright</title>
+<meta name="description" content="PANORAMA Shape is a free SketchUp extension by Panorama Studio. Stretch sofas, tables and cabinets while armrests and legs keep their size, and fillet or chamfer straight and curved edges.">
+<meta property="og:title" content="PANORAMA Shape - free SketchUp extension | Panelwright">
+<meta property="og:description" content="PANORAMA Shape is a free SketchUp extension by Panorama Studio. Stretch sofas, tables and cabinets while armrests and legs keep their size, and fillet or chamfer straight and curved edges.">
+<meta property="og:image" content="https://panelwright.app/assets/shape/og.png">
+<link rel="icon" href="assets/icon.png">
+<link rel="alternate" hreflang="en" href="https://panelwright.app/shape.html">
+<link rel="alternate" hreflang="mn" href="https://panelwright.app/mn/shape.html">
+<link rel="canonical" href="https://panelwright.app/shape.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero h1 em{white-space:normal}
+.sheet{max-width:760px;margin:40px auto 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 14px;text-align:left}
+.sheet svg text{font-family:"IBM Plex Mono",monospace;fill:var(--muted);font-size:12px}
+.sheet svg .big{fill:var(--ink);font-size:15px;font-weight:500}
+.slider{display:flex;align-items:center;gap:14px;margin-top:6px}
+.slider label{font:500 13px "IBM Plex Mono",monospace;color:var(--muted);white-space:nowrap}
+.slider output{font:500 15px "IBM Plex Mono",monospace;min-width:7ch;text-align:right}
+.slider input{flex:1;accent-color:var(--red);height:28px;cursor:pointer}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:7px;vertical-align:-1px}
+.shot{border:1px solid var(--line2);border-radius:12px;overflow:hidden;background:#151517;max-width:400px;margin:0 auto;box-shadow:0 30px 70px -30px rgba(0,0,0,.9)}
+.shot img{width:100%;height:auto}
+.ticks{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:8px;color:var(--muted)}
+.ticks li{padding-left:22px;position:relative}
+.ticks li::before{content:"";position:absolute;left:0;top:.7em;width:10px;height:2px;background:var(--red)}
+.shaline{font:400 12px "IBM Plex Mono",monospace;color:var(--faint);word-break:break-all;margin-top:14px}
+.mail{font-size:20px;font-family:Archivo,sans-serif;font-weight:600}
+.mail:hover{color:var(--red2)}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="9" fill="#232B36"/><rect x="11" y="12" width="16" height="40" rx="2" fill="#E8EBEE"/><rect x="30.5" y="12" width="22.5" height="17.5" rx="2" fill="#E8EBEE"/><rect x="30.5" y="33" width="22.5" height="19" rx="2" fill="#EC1D25"/></svg>
+    <span class="wm">Panel<span class="lt">wright</span></span>
+  </a>
+  <nav>
+    <a href="index.html#system">The system</a><a href="system.html">For shops</a><a href="index.html#cabinets">Cabinets</a><a href="pricing.html">Pricing</a><a href="shape.html" class="on">Shape</a><a href="getting-started.html">Docs</a><a href="mn/shape.html" hreflang="mn" lang="mn">МН</a>
+  </nav>
+  <a class="btn red" href="pricing.html#trial">Start free trial</a>
+</div></header>
+
+<section class="hero" style="border-top:0;padding-bottom:30px">
+  <div class="wrap">
+    <div class="kicker">Free SketchUp extension</div>
+    <h1>Stretch the sofa. <em>Keep the armrests.</em></h1>
+    <p class="lead">Make a sofa, table or cabinet longer without distorting its armrests, legs or handles. Round or bevel any straight or curved edge with a typed radius.</p>
+    <div class="cta">
+      <a class="btn red lg" href="downloads/PANORAMA_Shape_v1.2.1.rbz" download>Download PANORAMA Shape</a>
+      <a class="btn lg" href="#install">How to install</a>
+    </div>
+    <p class="note">v1.2.1 · 39 KB · SketchUp 2022 and newer · English and Монгол · works offline, no licence key</p>
+
+    <div class="sheet" id="demo">
+      <svg id="sofa" viewBox="0 0 700 300" role="img" aria-labelledby="sofa-t">
+        <title id="sofa-t">Front view of a sofa. Armrests stay 200 mm and legs stay 50 mm while the length changes.</title>
+        <defs><pattern id="hatch" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+          <rect width="8" height="8" fill="rgba(236,29,37,.18)"/><line x1="0" y1="0" x2="0" y2="8" stroke="rgba(236,29,37,.85)" stroke-width="2"/></pattern></defs>
+        <g id="sofa-g"></g>
+      </svg>
+      <div class="slider"><label for="len">Length</label><input id="len" type="range" min="1600" max="3200" step="50" value="2600"><output id="len-o" for="len">2600 mm</output></div>
+      <div class="legend"><span><i style="background:var(--line2)"></i>Kept size, only moves</span><span><i style="background:var(--red)"></i>Stretch zone</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">What it does</div><h2>Two tools for furniture drawings</h2><p>Both work on the groups and components you already have. No licence key, no account.</p></div>
+    <div class="grid g3"><div class="card"><div class="ic">01</div><h3>Smart Stretch</h3><p>Pick a group or component, drag a grip or type the new length. Only the main body grows. Armrests, legs and handles keep their exact size and move to the new end.</p></div><div class="card"><div class="ic">02</div><h3>Direct stretch</h3><p>Grips appear on all six sides. Drag to stretch, type 2600 or +300 and press Enter, hold Ctrl to grow from the center, press Esc to cancel.</p></div><div class="card"><div class="ic">03</div><h3>Fillet and Chamfer</h3><p>Type a radius or a distance. Works on straight edges, circles, arcs and holes. Select a face to process its whole outline at once.</p></div></div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="split">
+      <div><h2 style="font-size:30px">Auto zone finds the armrests and legs</h2><p class="muted" style="margin-top:14px">The zone table shows where each axis stretches. Press Auto and the extension reads the sub-group positions. Name a part [fix] and it never stretches. By default only the selected copy of a component changes.</p><ul class="ticks"><li>Zone preview in the model</li><li>Anchor from start, center or end</li><li>Rigid mode keeps inner groups undistorted</li></ul></div>
+      <div class="shot"><img src="assets/shape/ui-stretch-en.png" alt="PANORAMA Shape" width="460" height="1004" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+<section class="tight">
+  <div class="wrap">
+    <div class="split">
+      <div class="shot"><img src="assets/shape/ui-fillet-en.png" alt="PANORAMA Shape Fillet" width="460" height="776" loading="lazy"></div>
+      <div><h2 style="font-size:30px">Round or bevel with a live profile</h2><p class="muted" style="margin-top:14px">The preview shows the cross-section before you apply. Convex and concave corners, closed loops and open chains are handled, the rounded part gets smooth shading, and one Undo reverts it.</p><ul class="ticks"><li>Segments from 2 to 64</li><li>Symmetric or two different chamfer distances</li><li>Material is kept on the new faces</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">Install</div><h2>Install in a minute</h2></div>
+    <div class="grid g3"><div class="card"><div class="ic">01</div><h3>Download</h3><p>Get the .rbz file. Do not unzip it.</p></div><div class="card"><div class="ic">02</div><h3>Install</h3><p>In SketchUp open Extensions, Extension Manager, Install Extension. Choose the .rbz file and accept.</p></div><div class="card"><div class="ic">03</div><h3>Restart and use</h3><p>Restart SketchUp. The PANORAMA Shape menu is under Extensions. For the toolbar, turn it on in View, Toolbars.</p></div></div>
+    <div class="card" style="margin-top:18px;display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+      <a class="btn red lg" href="downloads/PANORAMA_Shape_v1.2.1.rbz" download>Download PANORAMA Shape <span class="small" style="opacity:.85;font-weight:400">v1.2.1 · 39 KB</span></a>
+      <div class="shaline" style="flex:1;min-width:240px;margin:0">SHA-256 of the file<br>1f99ef95ba7cea8c2b8fd093e17e1ad14283795e63a6771bcd9b81a5c0b8e901</div>
+    </div>
+  </div>
+</section>
+
+<section id="limits">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">Limits</div><h2>What to expect</h2></div>
+    <div class="grid g2">
+      <div class="card"><h3>Works well</h3><ul><li>Furniture groups and components, also rotated or scaled ones</li><li>Cylinders, round tables and holes</li><li>Closed outlines, open chains, concave corners</li><li>Material and Undo are kept</li></ul></div>
+      <div class="card"><h3>Known limits</h3><ul><li>Three or more selected edges meeting at one corner. Do it outline by outline.</li><li>A slanted face that crosses the stretch zone can bend</li><li>Edges almost flat (under 0.5°) are skipped</li><li>Tested on SketchUp 2026 for Windows. macOS is not tested yet.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker">FAQ</div><h2>Questions</h2></div>
+    <details><summary>Is it free?</summary><p>Yes. Download and use it for personal and commercial work. It is a separate extension from Panelwright and needs no licence key.</p></details><details><summary>Which SketchUp versions work?</summary><p>SketchUp 2022 and newer. It was tested on SketchUp 2026 for Windows.</p></details><details><summary>Does it change my other components?</summary><p>No. By default only the selected copy changes. The other copies stay as they are.</p></details><details><summary>Along which direction does it stretch?</summary><p>Along the object own X, Y or Z axis. A rotated sofa stretches along its own length.</p></details><details><summary>Does it send any data?</summary><p>No. It has no account and makes no network requests.</p></details><details><summary>How do I remove it?</summary><p>Extensions, Extension Manager, then Uninstall next to PANORAMA Shape.</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="card big" style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center">
+      <div><div class="kicker">Support</div><h3 style="font-size:24px">Questions or a bug?</h3><p style="font-size:16px;margin-top:8px">Write to us. Include your SketchUp version and, if you can, a screenshot or the model.</p><p class="small muted" style="margin-top:8px">Developer: Panorama Studio, Ulaanbaatar</p></div>
+      <a class="mail" href="mailto:support@panelwright.app">support@panelwright.app</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><span class="brand"><span class="wm">Panel<span class="lt">wright</span></span></span><p class="muted" style="margin-top:10px;max-width:320px">Cabinet and furniture production for SketchUp. Made by Panorama Studio, Ulaanbaatar.</p></div>
+    <div><b>Product</b><a href="index.html#system">The system</a><a href="system.html">For shops</a><a href="pricing.html">Pricing</a><a href="shape.html">PANORAMA Shape (free)</a><a href="getting-started.html">Documentation</a><a href="https://github.com/panaromastudio-dev/panelwright/releases/latest">Download Panelwright</a></div>
+    <div><b>Support</b><a href="activate.html">Get your licence key</a><a href="mailto:support@panelwright.app">support@panelwright.app</a><a href="faq.html">FAQ</a></div>
+    <div><b>Legal</b><a href="eula.html">Licence agreement</a><a href="privacy.html">Privacy</a></div>
+  </div>
+  <div class="copy"><span>© 2026 Panorama Studio. All rights reserved.</span><span>SketchUp is a trademark of Trimble Inc. Panelwright and PANORAMA Shape are independent products.</span></div>
+</div></footer>
+
+<script>
+(function(){
+  var g=document.getElementById('sofa-g'), out=document.getElementById('len-o'), inp=document.getElementById('len');
+  var GHOST='dashed: original 2000 mm';
+  function draw(L){
+    var k=0.2,cx=350,base=232,W=L*k,x0=cx-W/2,x1=cx+W/2,arm=200*k,H=850*k,top=base-H,legW=50*k,legH=100*k,bodyB=base-legH;
+    var kept='#2F3A46', ln='#66717D', s='';
+    [[x0+arm+6*3],[x1-arm-6*3-legW]].forEach(function(a){ s+='<rect x="'+a[0]+'" y="'+bodyB+'" width="'+legW+'" height="'+legH+'" fill="'+kept+'"/>'; });
+    s+='<rect x="'+(x0+arm)+'" y="'+top+'" width="'+(W-2*arm)+'" height="'+(H-legH)+'" fill="#1D252E"/>';
+    s+='<rect x="'+(x0+arm)+'" y="'+top+'" width="'+(W-2*arm)+'" height="'+(H-legH)+'" fill="url(#hatch)" stroke="#EC1D25"/>';
+    s+='<line x1="'+(x0+arm)+'" x2="'+(x1-arm)+'" y1="'+(top+70)+'" y2="'+(top+70)+'" stroke="#EC1D25" stroke-opacity=".6"/>';
+    if(L!==2000) s+='<rect x="'+(cx-200)+'" y="'+top+'" width="400" height="'+H+'" fill="none" stroke="#b9c0c8" stroke-opacity=".75" stroke-dasharray="4 5"/>';
+    [x0,x1-arm].forEach(function(x){ s+='<rect x="'+x+'" y="'+(top+30)+'" width="'+arm+'" height="'+(H-legH-30)+'" rx="4" fill="'+kept+'" stroke="'+ln+'"/>'; });
+    var dy=base+24;
+    s+='<g stroke="#95A0AC" fill="none"><path d="M'+x0+' '+(dy-5)+'V'+(dy+5)+'M'+x1+' '+(dy-5)+'V'+(dy+5)+'M'+x0+' '+dy+'H'+x1+'"/><path d="M'+x0+' '+dy+'l7 -3.5v7zM'+x1+' '+dy+'l-7 -3.5v7z" fill="#95A0AC"/></g>';
+    s+='<text class="big" x="'+cx+'" y="'+(dy+22)+'" text-anchor="middle">'+L+' mm</text>';
+    s+='<text x="'+x0+'" y="'+(top+16)+'">200 mm</text><text x="'+x1+'" y="'+(top+16)+'" text-anchor="end">200 mm</text>';
+    s+='<text x="'+(x0+arm+18+legW+6)+'" y="'+(base-4)+'">50 mm</text>';
+    if(L!==2000) s+='<text x="'+cx+'" y="'+(top-10)+'" text-anchor="middle">'+GHOST+'</text>';
+    g.innerHTML=s; out.textContent=L+' mm';
+  }
+  inp.addEventListener('input',function(e){ draw(+e.target.value); });
+  draw(2600);
+})();
+</script>
+<script src="motion.js" defer></script>
+</body>
+</html>
