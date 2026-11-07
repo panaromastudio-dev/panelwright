@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panelwright — SketchUp доторх тавилгын цехийн бүрэн үйлдвэрлэлийн систем</title>
+<meta name="description" content="Panelwright нь тавилгын цехийг бүхэлд нь SketchUp дотроос ажиллуулна: параметртэй шүүгээ, задаргаа, хавтангийн nesting, CNC файл, тоноглол ба материалын сан, нөөц ба худалдан авалт, цехийн баримт, үнийн санал, нэхэмжлэх, төслийн архив, ашгийн хяналт. 10 хоног үнэгүй туршина.">
+<meta property="og:title" content="Panelwright — тавилгын цехийн бүрэн үйлдвэрлэлийн систем">
+<meta property="og:description" content="Нэг өргөтгөл: зураг төсөл, задаргаа, nesting, CNC, худалдан авалт, нөөц, цехийн баримт, захиалагчийн баримт, архив, ашиг — бүгд SketchUp дотор.">
+<meta property="og:image" content="https://panelwright.app/assets/poster.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../assets/icon.png">
+<link rel="alternate" hreflang="en" href="https://panelwright.app/">
+<link rel="alternate" hreflang="mn" href="https://panelwright.app/mn/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<style>
+.hero h1 em,.phero h1 em{white-space:normal}
+@media (max-width:640px){#trial .card{grid-template-columns:1fr !important}}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="9" fill="#232B36"/><rect x="11" y="12" width="16" height="40" rx="2" fill="#E8EBEE"/><rect x="30.5" y="12" width="22.5" height="17.5" rx="2" fill="#E8EBEE"/><rect x="30.5" y="33" width="22.5" height="19" rx="2" fill="#EC1D25"/></svg>
+    <span class="wm">Panel<span class="lt">wright</span></span>
+  </a>
+  <nav>
+    <a href="#cabinets">Шүүгээ</a><a href="#machines">Машин</a><a href="#paperwork">Баримт</a>
+    <a href="system.html">Цехэд зориулсан</a><a href="pricing.html">Үнэ</a><a href="getting-started.html">Гарын авлага</a><a href="../index.html" hreflang="en" lang="en">EN</a>
+  </nav>
+  <a class="btn red" href="pricing.html#trial">Үнэгүй туршиж үзэх</a>
+</div></header>
+
+<!-- ================= HERO ================= -->
+<section class="phero">
+  <div class="wrap">
+    <div class="kicker">SketchUp өргөтгөл · Windows &amp; macOS · 2021+</div>
+    <h1>Тавилгын цех бүхэлдээ, <em>SketchUp дотор</em></h1>
+    <p class="lead">Гал тогоогоо зур. Нэг товч дар. Хавтан, машины файл, тоноглолын захиалга, захиалагчийн нэхэмжлэх бүгд гарна.</p>
+    <div class="cta">
+      <a class="btn red lg" href="pricing.html#trial">10 хоног үнэгүй туршиж үзэх</a>
+      <a class="btn lg" href="system.html">Бүх системийг үзэх</a>
+    </div>
+    <div class="note">Карт шаардахгүй. Бүх боломж. Миллиметр эсвэл фракц инч.</div>
+
+    <div class="stage">
+      <figure>
+        <img src="../assets/nesting.png" alt="Хавтангийн nesting зураглал: цагаан меламин 18 мм, 4-өөс 1-р хавтан, 2800 × 2070 мм, 91.1% ашиглалт, 23 деталь бүрд нэр, зүсэх хэмжээ бичигдсэн." width="1280" height="1000">
+      </figure>
+      <figcaption>Бодит үр дүн. 3.6 м гал тогооны 1-р хавтан — 91.1% ашигласан, деталь бүр нэр, хэмжээ, судлын тэмдэгтэй.</figcaption>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOUR CLAIMS ================= -->
+<section class="tight" style="padding-top:0;border-top:0">
+  <div class="wrap">
+    <div class="claims">
+      <div><b>Хурдан</b><p>3.6 м гал тогоо үнийн саналтай болтол ойролцоогоор хоёр минут.</p></div>
+      <div><b>Үнэн зөв</b><p>Дугуй деталь дугуй байна. Цоколь хөлд саадгүй. Шургуулга худалдаж авч болох дамжлагад таарна.</p></div>
+      <div><b>Бүрэн</b><p>Задаргаанаас нэхэмжлэх хүртэл арван дөрвөн баримт.</p></div>
+      <div><b>Офлайн</b><p>Бүртгэл, сервер, үүл шаардахгүй. Таны үнэ таны компьютерт л үлдэнэ.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CABINETS ================= -->
+<section id="cabinets">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Генератор</div>
+      <h2>Бодитоор бүтээж болох <em>хорин найман шүүгээ</em></h2>
+      <p>Чимэглэлийн хайрцаг биш. Энд байгаа дүрэм болгон нь өмнө нь алдаа гарсан ажлаас үүссэн.</p>
+    </div>
+
+    <div class="stage" style="margin-top:0">
+      <figure>
+        <img src="../assets/types.png" alt="SketchUp дээр зэрэгцүүлэн үүсгэсэн хорин найман төрлийн шүүгээ: доод, шургуулгын, угаалтуур ба зуухны, дээд, өндөр багана, техникийн багана, булан, арал, шкаф." width="1600" height="720">
+      </figure>
+    </div>
+
+    <div class="dense">
+      <span class="n">Доод шүүгээ</span><span class="n">Шургуулгын блок</span><span class="n">Угаалтуурын шүүгээ</span>
+      <span class="n">Дээд шүүгээ</span><span class="n">Дээш өргөгддөг дээд шүүгээ</span><span class="n">Өндөр багана</span>
+      <span class="n">Арал</span><span class="n">Шкаф</span><span class="n">Шургуулгатай шкаф</span>
+      <span class="n">Дотор шургуулга</span><span class="n">Гарч ирэх агуулах</span><span class="n">Шургуулгатай тумба</span>
+      <span class="n">Задгай тавиур</span><span class="n">ТВ тумба</span><span class="n">Угаалгын өрөөний тумба</span>
+      <span class="n">Сохор Г булан</span><span class="n">45° булан</span><span class="n">Булангийн дээд шүүгээ</span>
+      <span class="n">Дугуй төгсгөл</span><span class="n">Зуухны багана</span><span class="n">Хөргөгчийн багана</span>
+      <span class="n">Богино долгионы багана</span><span class="n">Зуухны тавцан</span><span class="n">Аяга таваг угаагч</span>
+      <span class="n">Угаалгын машин</span><span class="n">Дүүргэгч хавтан</span><span class="n">Төгсгөлийн хавтан</span>
+      <span class="n">Карниз</span>
+    </div>
+
+    <div class="numline">
+      <div><b>28</b><span>төрлийн шүүгээ</span></div>
+      <div><b>6</b><span>шүүгээ тус бүрийн тоо</span></div>
+      <div><b>1</b><span>шүүгээ тус бүрт Undo-гийн алхам</span></div>
+      <div><b>0</b><span>гар тэмдэглэгээ</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CORNER ================= -->
+<section class="tight">
+  <div class="wrap">
+    <div class="show">
+      <div class="txt">
+        <h3>Ихэнх хэрэгслийн буруу хийдэг булан</h3>
+        <p>45° булан бол хоёр хавтан ба найдвар биш, хаалттай хайрцаг. Panelwright хоёр буцах хажуу, митрээр зүссэн таван өнцөгт ширээний тавцан, гурван хэсэгтэй цоколь, таван хөлийг бүтээнэ — налуу хаалгыг биеийн гадна өлгөдөг тул саадгүй.</p>
+        <p>Сохор Г булан ч ижил арга барилаар бүтэх бөгөөд гараа дамжуулах шаардлагатай үхсэн зайг ч тооцно.</p>
+      </div>
+      <figure><img src="../assets/corner.png" alt="Генераторын бүтээсэн 45 градусын булангийн шүүгээ: хоёр буцах хажуугийн хавтан, таван өнцөгт тавцан, гурван хэсэгтэй цоколь." width="1600" height="600"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MACHINES ================= -->
+<section id="machines">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">CNC ба дам зүсэгч</div>
+      <h2>Дугуй деталь <em>дугуй</em> байна</h2>
+      <p>Ихэнх задаргаа зөвхөн хүрээлэгч дөрвөлжинг хардаг. Panelwright бодит контурыг хадгалдаг — энэ нь роутер юу зүсэх, захиалагчид хэдийг нэхэмжлэхийг өөрчилдөг.</p>
+    </div>
+
+    <div class="show rev">
+      <div class="txt">
+        <h3>Мөнгө хаана далд байдаг вэ</h3>
+        <p>Ø1260 ширээний тавцан 3.96 м ирмэгтэй. Хүрээлэгч дөрвөлжин 5.04 м гэж тооцно. Таны үнэлж байсан дугуй деталь болгон энэ зөрүүг үүрч байсан.</p>
+        <p>Nesting харагдац нь жинхэнэ тойргийг зурна, DXF контурыг өөрийн давхаргад, заготовкыг BLANK давхаргад экспортолно, цех роутероор зүсдэг үед жижиг деталь заготовкийн булан руу багтана.</p>
+        <div class="numline">
+          <div><b>3.96 m</b><span>бодит тойргийн урт</span></div>
+          <div><b>5.04 m</b><span>хүрээлэгч дөрвөлжин тооцох нь</span></div>
+          <div><b>170×170</b><span>мм тавиур булан бүрээс нөхөгдөнө</span></div>
+        </div>
+      </div>
+      <figure><img src="../assets/cornerfill.png" alt="Нэг хавтан дээр байрлуулсан хоёр дугуй ширээний тавцан, заготовк бүрийн дөрвөн булан дахь жижиг тавиурын деталь." width="1240" height="860"></figure>
+    </div>
+
+    <div class="strip" style="border-top:1px solid var(--line);margin-top:34px">
+      <div><h4>Хавтан ба деталь тус бүрийн DXF</h4><p>Контур PANEL давхаргад, заготовк BLANK давхаргад. Дахин зураагүйгээр роутерт бэлэн.</p></div>
+      <div><h4>System 32 өрөмдлөг</h4><p>35 мм аяга, 45/9.5 схем, 32 мм алхамтай Ø5 тавиурын тулгуур, конфирмат, Minifix эсвэл шаантаг — таны сонгосон холболтыг дагана.</p></div>
+      <div><h4>Штрих кодтой шошго</h4><p>Деталь бүрт нэг, зүсэх хэмжээ, материал, ирмэгийн кодтой. Ирмэг хуулах машин дээр сканнердана.</p></div>
+      <div><h4>Цехийн дүрмийн шалгалт</h4><p>Хавтангаас том деталь, стандарт бус дамжлагын урт, нугасандаа хэт өргөн хаалга — хэн ч зүсэхээс өмнө баригдана.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAPERWORK ================= -->
+<section id="paperwork">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Баримт бичиг</div>
+      <h2>Арван дөрвөн баримт, <em>нэгийг ч дахин бичихгүй</em></h2>
+      <p>Бүгд нэг тооцооноос гарах бөгөөд таны компанийн толгой, нөхцөл, захиалагчийн мэдээлэл аль хэдийн бөглөгдсөн байна.</p>
+    </div>
+
+    <div class="papers">
+      <figure>
+        <img src="../assets/quote.png" alt="Үүсгэсэн үнийн санал: ажил ба материал, тоноглол ба дагалдах, CNC зүсэлт, ирмэг хуулга, угсралт, НӨАТ болон төлөх нийт дүн." width="910" height="1287">
+        <figcaption><b>Үнийн санал</b>Дөрвөн хэлбэр — дэлгэрэнгүй, товч, өрөөгөөр, шүүгээгээр</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/invoice.png" alt="Үүсгэсэн нэхэмжлэх: төлөгчийн мэдээлэл, мөрүүд, НӨАТ, төлөх дүн, банкны мэдээлэл." width="910" height="1287">
+        <figcaption><b>Нэхэмжлэх</b>FROM / BILL TO, татвар төлөгчийн дугаар, IBAN, SWIFT, PO дугаар, Net-30</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/labels.png" alt="Деталийн шошгоны хуудас: шошго бүрт штрих код, деталийн дугаар, нэр, зүсэх хэмжээ, материал." width="910" height="1287">
+        <figcaption><b>Деталийн шошго</b>Штрих код, зүсэх хэмжээ, материал, ирмэгийн код</figcaption>
+      </figure>
+    </div>
+
+    <div class="strip" style="border-top:1px solid var(--line);margin-top:32px">
+      <div><h4>Захиалагчид</h4><p>Үнийн санал, хэмжилтийн хуудастай зураг төслийн санал, нэхэмжлэх, PDF болон засварлах боломжтой Word хэлбэрийн гэрээ, хавсралт нь аль хэдийн орсон и-мэйл ноорог.</p></div>
+      <div><h4>Цехэд</h4><p>Задаргаа, 3D харагдацтай угсралтын хуудас, интернэтгүй утсан дээр нээгддэг цехийн багц, нэгж бүрийн тоноглолын уут ба савлалтын жагсаалт.</p></div>
+      <div><h4>Машинд</h4><p>Хавтан ба деталь тус бүрийн DXF, PDF ба DXF өрөмдлөг, бодит томьёотой Excel, штрих кодтой шошго.</p></div>
+      <div><h4>Бизнест</h4><p>Худалдан авалтын захиалга, бүх ажлыг хамарсан нэг MASTER Excel, төлөвлөсөн ба бодит ашгийн харьцуулалт, хувилбарын харьцуулалт, бүрэн нөөцлөлт.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SYSTEM ================= -->
+<section id="system">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="kicker">Систем</div>
+      <h2>Нэг тооцоо. <em>Ажилд хэрэгтэй бүх зүйл.</em></h2>
+      <p>Ихэнх plugin хүснэгт өгөөд зогсдог. Panelwright ажлыг эцэс хүртэл нь авч явдаг бөгөөд сурсан зүйлээ дараагийн ажилд буцааж тусгадаг.</p>
+    </div>
+    <div class="stage" style="margin-top:0">
+      <figure style="background:var(--card);padding:8px">
+        <img src="../assets/system.svg" alt="Системийн схем: таны SketchUp модель Panelwright руу орно, Panelwright таны материал, тоноглол, цехийн стандарт, загварын сангуудыг ашиглан цехийн файл, захиалагчийн баримт, бизнесийн бүртгэл гаргана; үлдэгдэл, нөөц, бодит өртөг дараагийн ажилд буцна." width="1160" height="560">
+      </figure>
+    </div>
+    <div class="cta" style="margin-top:34px">
+      <a class="btn lg" href="system.html">Цех үүнийг бодитоор хэрхэн ажиллуулдгийг үзэх →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= YOUR DATA ================= -->
+<section class="tight">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Таны өгөгдөл</div>
+      <h2>Таных <em>хэвээр</em> үлдэнэ</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Үүл, телеметргүй</h3>
+        <p>Бүх зүйл таны өөрийн компьютерийн фолдерт бичигдэнэ. Бүртгэл, синк, аналитик байхгүй. Сүлжээний ганц дуудлага нь шинэчлэл шалгалт, лиценз идэвхжүүлэлт, мөн таны өөрийн илгээхээр сонгосон оношилгоо.</p>
+      </div>
+      <div class="card">
+        <h3>Нэг нөөц файл</h3>
+        <p>Үнэ, тоноглол, компани ба захиалагчийн мэдээлэл, төслийн архив, үлдэгдлийн агуулах нэг нөөцөнд багтана. Тэглэх, сэргээхийн өмнө автоматаар нөөцлөнө. Шинэ компьютер рүү нэг минутад шилжинэ.</p>
+      </div>
+      <div class="card">
+        <h3>Багаар ажиллахад аюулгүй</h3>
+        <p>Хэд хэдэн дизайнерыг сүлжээний диск эсвэл локал серверийн нэг фолдер руу чиглүүлнэ. Үнэ ба нийлүүлэгчийн сан, төслийн архив, үлдэгдэл, нөөц бүгд тэнд байна. Файл түгжих, атом бичилт нь хоёр хүн нэгэн зэрэг хадгалахад бие биеийнхээ ажлыг алдахгүй байлгана.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARE ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Харьцуулалт</div>
+      <h2>Цехэд бодитоор хэрэгтэй зүйл, <em>нэг баганад</em></h2>
+    </div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th></th><th>Үнэгүй задаргааны plugin</th><th>Desktop CAM / ERP багц</th><th>Panelwright</th></tr></thead>
+        <tbody>
+          <tr><td>SketchUp-ийн ямар ч геометрээс задаргаа</td><td class="y">Тийм</td><td class="n">Зөвхөн импорт</td><td class="y">Тийм</td></tr>
+          <tr><td>Параметртэй шүүгээний сан</td><td class="n">Үгүй</td><td class="y">Тийм</td><td class="y">Тийм</td></tr>
+          <tr><td>Үлдэгдлийн агуулахтай nesting</td><td class="n">Энгийн</td><td class="y">Тийм</td><td class="y">Тийм</td></tr>
+          <tr><td>Өрөмдлөгийн өгөгдөлтэй тоноглолын каталог</td><td class="n">Үгүй</td><td class="y">Тийм</td><td class="y">Тийм</td></tr>
+          <tr><td>Материал ба үнийн сан, ажлын хөлсний тариф</td><td class="n">Үгүй</td><td class="y">Тийм</td><td class="y">Тийм</td></tr>
+          <tr><td>Нөөцийн хяналт ба худалдан авалтын захиалга</td><td class="n">Үгүй</td><td class="y">Тийм</td><td class="y">Тийм</td></tr>
+          <tr><td>Үнийн санал, нэхэмжлэх, гэрээ</td><td class="n">Үгүй</td><td class="n">Ховор</td><td class="y">Тийм</td></tr>
+          <tr><td>Төслийн архив ба ашгийн хяналт</td><td class="n">Үгүй</td><td class="y">Тийм</td><td class="y">Тийм</td></tr>
+          <tr><td>SketchUp дотор, офлайн, сервергүй ажиллана</td><td class="y">Тийм</td><td class="n">Үгүй</td><td class="y">Тийм</td></tr>
+          <tr><td>Анхны ажил хүртэлх тохиргооны хугацаа</td><td class="y">Минутууд</td><td class="n">Долоо хоногууд + сургалт</td><td class="y">Нэг үдэш</td></tr>
+          <tr><td>Үнэ</td><td class="y">Үнэгүй</td><td class="n">Суудал бүрт мянга мянган доллар</td><td class="y">Сард $24-аас</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cap">Panelwright нь нэгээс хорин хүртэл хүний цехэд зориулагдсан. Энэ нь үйлдвэрийн MRP биш: машины хуваарь, нягтлан бодох бүртгэлийн холбоо, олон салбарын сервер байхгүй. Харин хамарсан зүйлээ эцэс хүртэл нь хамарна.</p>
+  </div>
+</section>
+
+<!-- ================= UNITS / ABOUT ================= -->
+<section class="tight">
+  <div class="wrap">
+    <div class="strip">
+      <div><h4>Миллиметр эсвэл инч</h4><p>Задаргаа, nesting, баримт, шошгонд фракц инч (28 3/8"). Letter эсвэл A4. Модель, эсвэл та өөрөө шийднэ.</p></div>
+      <div><h4>Зургаан хэл</h4><p>English, Español, Türkçe, Русский, 中文, Монгол — интерфейс, баримт, шошго бүгд. Орчуулгын файлыг экспортолж өөрийнхөө хэлийг нэмж болно.</p></div>
+      <div><h4>Суурилуулсан тусламж</h4><p>Зурагтай PDF гарын авлага, таны тооцоог уншиж засвар санал болгодог туслах, нэг товшилтоор илгээх оношилгооны тайлан.</p></div>
+      <div><h4>Жинхэнэ хөрөөний хажууд бүтсэн</h4><p>Улаанбаатар дахь Panorama Studio бүтээсэн. Нэг хүн хөгжүүлдэг тул алдаа хурдан засагдаж, цаашдын төлөвлөгөө бодит цехүүдээс гардаг.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="kicker">Үнэ</div>
+      <h2>Нэг үнэ. <em>Эхний ажилдаа л өөрийгөө нөхнө.</em></h2>
+      <p>Төлөвлөгөө бүр бүх боломжийг нээнэ — модуль, шүүгээний хязгаар, усан тэмдэг байхгүй.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="tag2">Сараар</div><h3>Уян хатан</h3>
+        <div class="price">$29 <small>/ сар</small></div>
+        <div class="per">сар бүр төлнө · хэдийд ч цуцална</div>
+        <a class="btn" href="pricing.html">Дэлгэрэнгүй</a>
+      </div>
+      <div class="plan best">
+        <div class="tag2">Жилээр · хамгийн их сонгогддог</div><h3>2 сар үнэгүй</h3>
+        <div class="price">$290 <small>/ жил</small></div>
+        <div class="per">≈ $24 / сар · жилээр төлнө</div>
+        <a class="btn red" href="pricing.html">Дэлгэрэнгүй</a>
+      </div>
+      <div class="plan">
+        <div class="tag2">Хугацаагүй · нээлтийн үнэ</div><h3>Өөрийн болго</h3>
+        <div class="price"><span class="was">$690</span>$490</div>
+        <div class="per">нэг удаа · эхний 50 лиценз · 12 сарын шинэчлэл багтсан</div>
+        <a class="btn" href="pricing.html">Дэлгэрэнгүй</a>
+      </div>
+    </div>
+    <div class="guar">
+      <span><b>10 хоногийн үнэгүй туршилт</b> — бүх боломж, карт шаардахгүй</span>
+      <span><b>14 хоногийн мөнгө буцаалт</b> аль ч худалдан авалтад</span>
+      <span><b>Багийн төлөвлөгөө</b> 3 суудлаас</span>
+      <span><b>Windows &amp; macOS</b> — SketchUp 2021 ба түүнээс дээш</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap narrow">
+    <div class="sec-head">
+      <div class="kicker">Түгээмэл асуулт</div>
+      <h2>Цехүүдийн худалдан авахын өмнө <em>асуудаг асуултууд</em></h2>
+    </div>
+    <details><summary>Энэ үнэхээр бүтэн систем үү, эсвэл нэмэлттэй plugin уу?</summary><p>Зураг төсөл, үйлдвэрлэлийн файл, өөрийн сан, худалдан авалт ба нөөц, захиалагчийн баримт, төслийн архив, ажил бүрийн ашгийг нэг тооцооноос хамарна. Энэ нь үйлдвэрийн MRP биш: машины хуваарь, нягтлан бодох бүртгэлийн холбоо, олон салбарын сервер байхгүй. Нэгээс хорин хүртэл хүний цехэд эцэс хүртэл нь хүрнэ.</p></details>
+    <details><summary>Генераторынх биш, миний өөрөө зурсан шүүгээнд ажиллах уу?</summary><p>Ажиллана. Ямар ч групп эсвэл компонентийг деталь гэж уншина. Panelwright зузаан, хэмжээ, материал, ил ирмэгийг геометрээс нь шууд авдаг тул гараар зурсан модель генераторын бүтээсэнтэй адилхан ажиллана.</p></details>
+    <details><summary>SketchUp-ийн аль хувилбарууд дээр ажиллах вэ?</summary><p>SketchUp 2021 ба түүнээс шинэ, Windows болон macOS дээр. SketchUp дотор ажилладаг тул өөр юу ч суулгах шаардлагагүй.</p></details>
+    <details><summary>Хоёр, гурван дизайнер хамтдаа ашиглаж болох уу?</summary><p>Болно. Бүгдийг нэг дундын фолдер руу чиглүүлбэл үнэ ба нийлүүлэгчийн сан, төслийн архив, үлдэгдэл, нөөц нэг дундын багц болно — хавтангийн үнийг нэг удаа өөрчлөхөд бүгд түүгээр үнэлнэ.</p><p>Файл түгжих, атом бичилт нь хоёр хүн нэгэн зэрэг хадгалахад бие биеийнхээ ажлыг алдахаас сэргийлнэ. Таны цонх нээлттэй байх хооронд өөр хүн үнийн санг засвал Panelwright танд мэдэгдэж, дарж бичихээсээ өмнө асууна — чимээгүй дарж бичихгүй.</p><p>Жинхэнэ сүлжээний дундын диск эсвэл локал сервер хэрэглэнэ. Үүлэн синкийн фолдер (Dropbox, Google Drive, OneDrive) файл түгжиж чаддаггүй, өөрийн зөрчилтэй хуулбарыг үүсгэдэг. Компанийн мэдээлэл, баримтын загвар компьютер бүрт тусдаа үлдэнэ.</p></details>
+    <details><summary>Төлөхөө болих эсвэл компьютер солиход өгөгдөл минь яах вэ?</summary><p>Таны төсөл, үнэ, тохиргоо өөрийн компьютер дээрх файл тул тэнд үлдэнэ. Түлхүүр нь зөвхөн програмыг дахин нээдэг. Компьютер солих нь нэг нөөц файл.</p></details>
+    <details><summary>Nesting нь CNC-д хангалттай сайн уу?</summary><p>Тийм, нэг анхаарах зүйлтэйгээр. Nesting нь зүсвэр, зай, судал, үлдэгдлийг дахин ашиглахыг тооцдог MaxRects бөгөөд дугуй, хэлбэртэй деталь DXF дотор жинхэнэ контураа хадгална. Жижиг деталийг дугуй заготовкийн булан руу байрлуулдаг — роутер дээр хэрэгтэй, харин хавтан зүсэгч дээр тохирохгүй тул тохиргоо болон анхааруулга байдаг.</p></details>
+    <details><summary>Каталогийн брэндийн биш, өөрийн тоноглолыг ашиглаж болох уу?</summary><p>Болно. Каталогт Blum, Hettich, Häfele, Grass, Salice-ийн бодит загвар, хэмжээс, өрөмдлөгийн схем орсон бөгөөд өөрийнхөө тоноглолыг хажууд нь нэмж болно.</p></details>
+    <details><summary>Туршилтад юу багтдаг вэ?</summary><p>Бүгд, арван хоногийн турш. Карт, усан тэмдэг, шүүгээ эсвэл экспортын хязгаар байхгүй. Дууссаны дараа таны төсөл, тохиргоо үлдэх бөгөөд түлхүүр дахин нээнэ.</p></details>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="tight">
+  <div class="wrap">
+    <div class="band">
+      <h2>Дараагийн гал тогоогоо туршаад үзээрэй</h2>
+      <p>Суулгаад, нэг ажил загварчлаад, Тооцоолох дарна уу. Хэрэв нэг үдшийг хэмнэхгүй бол та юу ч алдаагүй.</p>
+      <div class="cta">
+        <a class="btn red lg" href="pricing.html#trial">10 хоног үнэгүй туршиж үзэх</a>
+        <a class="btn lg" href="getting-started.html">Гарын авлага унших</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><span class="brand"><span class="wm">Panel<span class="lt">wright</span></span></span><p class="muted" style="margin-top:10px;max-width:340px">SketchUp доторх тавилга, шүүгээний цехийн бүрэн үйлдвэрлэлийн систем. Улаанбаатар дахь Panorama Studio бүтээсэн.</p></div>
+    <div><b>Бүтээгдэхүүн</b><a href="#cabinets">Шүүгээ</a><a href="#machines">CNC</a><a href="#paperwork">Баримт</a><a href="system.html">Цехэд зориулсан</a><a href="pricing.html">Үнэ</a><a href="https://github.com/panaromastudio-dev/panelwright/releases/latest" target="_blank" rel="noopener">Татах</a></div>
+    <div><b>Дэмжлэг</b><a href="activate.html">Лицензийн түлхүүр авах</a><a href="mailto:support@panelwright.app">support@panelwright.app</a><a href="faq.html">Түгээмэл асуулт</a><a href="getting-started.html">Гарын авлага</a><a href="units-languages.html">Нэгж ба хэл</a></div>
+    <div><b>Хууль зүй</b><a href="eula.html">Лицензийн гэрээ</a><a href="privacy.html">Нууцлал</a></div>
+  </div>
+  <div class="copy">
+    <span>© 2026 Panorama Studio. Бүх эрх хуулиар хамгаалагдсан.</span>
+    <span>SketchUp нь Trimble Inc-ийн худалдааны тэмдэг. Panelwright бол бие даасан бүтээгдэхүүн.</span>
+  </div>
+</div></footer>
+
+<script src="../motion.js" defer></script>
+</body>
+</html>

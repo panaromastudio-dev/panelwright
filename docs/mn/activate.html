@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лицензийн түлхүүр авах — Panelwright</title>
+<meta name="description" content="Panelwright-ийн захиалгаа өөрийн компьютерт зориулсан лицензийн түлхүүр болгоно. Ямар ч цагт, ойролцоогоор нэг секунд болно.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+<style>
+.act{max-width:680px;margin:0 auto;padding:56px 24px 96px}
+.act h1{font-size:38px;margin-bottom:14px}
+.act .lead{margin-bottom:34px}
+.field{margin-bottom:20px}
+.field label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+.field .hint{font-size:13.5px;color:var(--faint);margin-bottom:8px}
+.field input{width:100%;padding:13px 15px;border-radius:10px;border:1px solid var(--line2);
+  background:var(--bg2);color:var(--ink);font:15px/1.4 "IBM Plex Mono",monospace;letter-spacing:.02em}
+.field input:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(236,29,37,.15)}
+.field input::placeholder{color:#4C5763;letter-spacing:0}
+#go{width:100%;margin-top:6px}
+#go[disabled]{opacity:.55;cursor:not-allowed}
+.out{margin-top:28px}
+.keybox{background:var(--bg2);border:1px solid var(--line2);border-radius:10px;padding:16px;
+  font:13.5px/1.55 "IBM Plex Mono",monospace;word-break:break-all;color:#CFE8DC;max-height:190px;overflow:auto}
+.row{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.ok{border-left:3px solid var(--green)}
+.bad{border-left:3px solid var(--red)}
+.meta{font-size:14px;color:var(--muted);margin-top:12px}
+.meta b{color:var(--ink)}
+.steps2{counter-reset:n;list-style:none;padding:0;margin:0 0 34px}
+.steps2 li{counter-increment:n;position:relative;padding:0 0 14px 38px;color:var(--muted);font-size:15px}
+.steps2 li::before{content:counter(n);position:absolute;left:0;top:-1px;width:25px;height:25px;border-radius:50%;
+  background:var(--red-soft);border:1px solid rgba(236,29,37,.35);color:var(--red2);
+  display:grid;place-items:center;font-size:12.5px;font-weight:700;font-family:Archivo,sans-serif}
+.steps2 b{color:var(--ink)}
+.spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(255,255,255,.28);
+  border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;vertical-align:-2px;margin-right:8px}
+@keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="9" fill="#232B36"/><rect x="11" y="12" width="16" height="40" rx="2" fill="#E8EBEE"/><rect x="30.5" y="12" width="22.5" height="17.5" rx="2" fill="#E8EBEE"/><rect x="30.5" y="33" width="22.5" height="19" rx="2" fill="#EC1D25"/></svg>
+    <span class="wm">Panel<span class="lt">wright</span></span>
+  </a>
+  <nav>
+    <a href="system.html">Цехэд зориулсан</a><a href="pricing.html">Үнэ</a><a href="getting-started.html">Гарын авлага</a><a href="../activate.html" hreflang="en" lang="en">EN</a>
+  </nav>
+  <a class="btn" href="mailto:support@panelwright.app">Дэмжлэг</a>
+</div></header>
+
+<main class="act">
+  <div class="kicker">Худалдан авсны дараа</div>
+  <h1>Лицензийн түлхүүрээ аваарай</h1>
+  <p class="lead">Таны түлхүүр нэг компьютерт холбогддог тул төлбөр хийх үед биш, суулгасны дараа үүсдэг. Ойролцоогоор нэг секунд болно.</p>
+
+  <ol class="steps2">
+    <li><b>Panelwright-ийг суулгана</b> — <code>.rbz</code> файл захиалгын и-мэйлтэй хамт ирсэн. SketchUp дотор: Extensions → Extension Manager → Install Extension.</li>
+    <li>Extensions → Panelwright → <b>Лиценз</b> хэсгийг <b>нээгээд</b>, тэнд харагдах <b>Computer ID</b>-г хуулна.</li>
+    <li><b>Хоёуланг доор буулгана.</b> Түлхүүр энэ хуудсан дээр гарч ирнэ — тэр Лиценз цонхонд оруулна.</li>
+  </ol>
+
+  <form id="f" autocomplete="off">
+    <div class="field">
+      <label for="lk">Захиалгын лицензийн түлхүүр</label>
+      <div class="hint">Худалдан авалтын и-мэйлээс — <code>2C4A1B9E-7F3D-4A21-B8C6-9E1D5F0A3C7B</code> шиг харагдана.</div>
+      <input id="lk" name="lk" required spellcheck="false" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX">
+    </div>
+    <div class="field">
+      <label for="mid">Computer ID</label>
+      <div class="hint">SketchUp доторх Extensions → Panelwright → Лиценз хэсгээс.</div>
+      <input id="mid" name="mid" required spellcheck="false" placeholder="ABCDE-FGHIJ-KLMNO-PQRST-UVWXY-Z2345-67">
+    </div>
+    <button class="btn red lg" id="go" type="submit">Лицензийн түлхүүрээ авах</button>
+  </form>
+
+  <div class="out" id="out" hidden></div>
+
+  <div class="callout" style="margin-top:40px">
+    <p><b>Компьютер солих уу?</b> Шинэ компьютер дээр ижил хуудсыг ашиглана. Суудал бүгд дүүрсэн бол
+    <a href="mailto:support@panelwright.app" style="color:var(--red2)">support@panelwright.app</a> руу бичнэ үү, хуучин нь чөлөөлөгдөнө.
+    <b>Түлхүүрээ гээсэн үү?</b> Ижил хоёр утгаа дахин оруул — ижил түлхүүр буцаж гарна, нэмэлт суудал зарцуулахгүй.</p>
+  </div>
+</main>
+
+<footer><div class="wrap"><div class="copy" style="border-top:0;padding-top:0">
+  <span>© 2026 Panorama Studio. Бүх эрх хуулиар хамгаалагдсан.</span>
+  <span>SketchUp нь Trimble Inc-ийн худалдааны тэмдэг. Panelwright бол бие даасан бүтээгдэхүүн.</span>
+</div></div></footer>
+
+<script>
+(function () {
+  // Set this to your deployed Worker URL.
+  var API = 'https://panelwright-license.panoramastudio.workers.dev';
+
+  var f = document.getElementById('f'),
+      go = document.getElementById('go'),
+      out = document.getElementById('out'),
+      lk = document.getElementById('lk'),
+      mid = document.getElementById('mid');
+
+  var MESSAGES = {
+    invalid_license_key: 'Энэ захиалгын түлхүүр олдсонгүй. Худалдан авалтын и-мэйлтэйгээ тулгана уу — захиалгын дугаар биш, урт түлхүүр байх ёстой.',
+    subscription_expired: 'Энэ захиалгын хугацаа дууссан. Сунгавал энэ хуудас тэр дор нь дахин ажиллана.',
+    license_disabled: 'Энэ түлхүүрийг идэвхгүй болгосон байна. support@panelwright.app руу бичвэл бид шийднэ.',
+    activation_limit_reached: 'Энэ лицензийн бүх компьютерийн суудал аль хэдийн хэрэглэгдсэн байна.',
+    bad_machine_id: 'Энэ нь Computer ID шиг харагдахгүй байна. Extensions → Panelwright → Лиценз хэсгээс хуулна уу.',
+    missing_license_key: 'Захиалгын и-мэйлээс ирсэн лицензийн түлхүүрээ оруулна уу.',
+    rate_limited: 'Хэт олон оролдлого хийлээ. Хэдэн минут хүлээгээд дахин оролдоно уу.',
+    license_service_unavailable: 'Төлбөрийн үйлчилгээ одоогоор хариу өгөхгүй байна. Нэг минутын дараа дахин оролдоно уу.',
+    server_not_configured: 'Манай талд асуудал гарлаа. support@panelwright.app руу бичнэ үү.',
+    server_error: 'Алдаа гарлаа. Хэсэг хугацааны дараа дахин оролдоно уу — үргэлжлээд алдаа өгвөл support@panelwright.app руу бичнэ үү.'
+  };
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function fail(msg, detail) {
+    out.hidden = false;
+    out.innerHTML = '<div class="callout bad"><p><b>' + esc(msg) + '</b>'
+      + (detail ? '<br><span class="small">' + esc(detail) + '</span>' : '')
+      + '<br><span class="small">Шийдэгдсэнгүй юу? <a href="mailto:support@panelwright.app" style="color:var(--red2)">support@panelwright.app</a> — хүн хариулна.</span></p></div>';
+    out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function succeed(d) {
+    var when = d.expires
+      ? 'Хүчинтэй хугацаа: <b>' + esc(d.expires) + '</b>'
+      : 'Энэ түлхүүр <b>хугацаа дуусахгүй</b>';
+    var seats = (d.seats_total)
+      ? ' · Ашигласан компьютер: <b>' + esc(d.seats_used) + ' / ' + esc(d.seats_total) + '</b>' : '';
+    out.hidden = false;
+    out.innerHTML =
+      '<div class="callout ok"><p><b>' + (d.reissued ? 'Таны түлхүүр дахин энд байна.' : 'Таны лицензийн түлхүүр бэлэн боллоо.')
+      + '</b><br><span class="small">SketchUp → Extensions → Panelwright → Лиценз хэсэгт хуулж оруулаад Идэвхжүүлэх дарна уу.</span></p></div>'
+      + '<div class="keybox" id="kb">' + esc(d.key) + '</div>'
+      + '<div class="row"><button class="btn" type="button" id="cp">Түлхүүр хуулах</button>'
+      + '<button class="btn" type="button" id="dl">Файл болгон хадгалах</button></div>'
+      + '<div class="meta">' + when + seats + '</div>';
+
+    document.getElementById('cp').onclick = function () {
+      var b = this;
+      navigator.clipboard.writeText(d.key).then(function () {
+        b.textContent = 'Хууллаа'; setTimeout(function () { b.textContent = 'Түлхүүр хуулах'; }, 1800);
+      }, function () {
+        var r = document.createRange(); r.selectNodeContents(document.getElementById('kb'));
+        var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = 'Ctrl+C дарна уу';
+      });
+    };
+    document.getElementById('dl').onclick = function () {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob(
+        ['Panelwright лицензийн түлхүүр\r\nComputer ID: ' + mid.value.trim().toUpperCase() +
+         '\r\n' + (d.expires ? 'Хүчинтэй хугацаа: ' + d.expires : 'Хугацаа дуусахгүй') +
+         '\r\n\r\n' + d.key + '\r\n'], { type: 'text/plain' }));
+      a.download = 'panelwright-licence.txt';
+      document.body.appendChild(a); a.click(); a.remove();
+    };
+    out.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  f.onsubmit = function (e) {
+    e.preventDefault();
+    out.hidden = true;
+    go.disabled = true;
+    go.innerHTML = '<span class="spin"></span>Захиалгыг шалгаж байна…';
+
+    fetch(API + '/activate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        license_key: lk.value.trim(),
+        machine_id: mid.value.trim().toUpperCase()
+      })
+    }).then(function (r) {
+      return r.json().then(function (d) { return { ok: r.ok, d: d }; });
+    }).then(function (res) {
+      if (res.ok && res.d.key) succeed(res.d);
+      else fail(MESSAGES[res.d.error] || 'Алдаа гарлаа.',
+                res.d.error === 'activation_limit_reached' ? res.d.detail : null);
+    }).catch(function () {
+      fail('Лицензийн сервертэй холбогдож чадсангүй. Интернэт холболтоо шалгаад дахин оролдоно уу.');
+    }).then(function () {
+      go.disabled = false;
+      go.textContent = 'Лицензийн түлхүүрээ авах';
+    });
+  };
+})();
+</script>
+<script src="../motion.js" defer></script>
+</body>
+</html>
