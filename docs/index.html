@@ -25,7 +25,7 @@
     <span class="wm">Panel<span class="lt">wright</span></span>
   </a>
   <nav>
-    <a href="#cabinets">Cabinets</a><a href="#machines">Machines</a><a href="#paperwork">Paperwork</a>
+    <a href="#cabinets">Cabinets</a><a href="#machines">Machines</a><a href="#paperwork">Paperwork</a><a href="#business">Management</a>
     <a href="system.html">For shops</a><a href="pricing.html">Pricing</a><a href="shape.html">Shape</a><a href="clean.html">Clean</a><a href="getting-started.html">Docs</a>
     <a href="mn/index.html" hreflang="mn" lang="mn">МН</a>
   </nav>
@@ -181,6 +181,88 @@
   </div>
 </section>
 
+<style>
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:8px}
+.shots figure{margin:0;background:var(--card,#fff);border:1px solid var(--line,#dde1e6);border-radius:12px;overflow:hidden}
+.shots figure.wide{grid-column:1/-1}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:12px 16px 14px;font-size:.92rem;line-height:1.5}
+.shots figcaption b{display:block;margin-bottom:2px}
+@media (max-width:760px){.shots{grid-template-columns:1fr}}
+.docshot{margin:18px 0 26px}.docshot img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #dde1e6}
+.docshot figcaption{font-size:.9rem;opacity:.8;margin-top:6px}
+</style>
+<!-- ================= REAL WINDOW ================= -->
+<section id="screens">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">The real window</div>
+      <h2>This is <em>what Panelwright looks like</em></h2>
+      <p>These are screenshots of the actual Panelwright window with sample data. It opens as its own window inside SketchUp.</p>
+    </div>
+    <div class="shots">
+      <figure>
+        <img src="assets/desk_results_en.webp" alt="Panelwright Results page: part count, sheets, hardware, edge banding and total payable." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Results</b>Every part, sheet count, material and the total payable on one screen.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/desk_prices_en.webp" alt="Panelwright Prices page: list of material, labour and hardware prices." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Price base</b>Set materials, labour and hardware prices to your own shop rates.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/desk_management_en.webp" alt="Control center: plan progress, sales by day and the job pipeline." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Control center</b>New proposals, confirmed and completed jobs, sales, profit, weekly/monthly/yearly plan.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/desk_report_en.webp" alt="Monthly and yearly report: projects, sales, cost, profit, margin and area for each month." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Monthly and yearly report</b>Projects, sales, cost, profit and margin for every month, with MASTER Excel export.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/desk_project_en.webp" alt="Project and client page: customer details, project name, code and company details." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Project and client</b>Customer details, project name, code and company letterhead in one place.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/desk_business_en.webp" alt="Business dashboard: total projects, sales, monthly sales chart and status breakdown." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Business dashboard</b>Total projects, sales, profit, monthly chart and status breakdown.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/desk_manual_en.webp" alt="Add project manually form: customer, project name, itemised rows with quantity and amount, and the total." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Add a project manually</b>Log a job without a model, itemised row by row; the total is the sum of the rows.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/desk_team_en.webp" alt="Users, roles and permissions page: the user list and the permission checkboxes for each role." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Users and roles</b>Designer, accountant, manager and director: edit what each role may do.</figcaption>
+      </figure>
+      <figure class="wide">
+        <img src="assets/catalogue_templates_en.webp" alt="Comparison of the cover pages of the eight catalogue templates." width="2728" height="932" loading="lazy" decoding="async">
+        <figcaption><b>8 catalogue templates</b>Panelwright, Studio, Noir, Sand, Forest, Navy, Classic, Minimal, each with its own colours and cover layout.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUSINESS & TEAM ================= -->
+<section id="business">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Business and team</div>
+      <h2>Run the shop <em>from inside SketchUp</em></h2>
+      <p>Drawing and costing is only half of it. See how many jobs came in, how many are done, what the profit is and whose work is late, all in one window. Your team signs in with a name and a code and sees only what their role allows.</p>
+    </div>
+    <div class="strip">
+      <div><h4>Control center</h4><p>New proposals, confirmed and completed jobs, sales and profit on one screen. Weekly, monthly and yearly plan progress, the job pipeline, overdue jobs and the workload of each designer.</p></div>
+      <div><h4>Project card</h4><p>Each project keeps its renders, finished-work photos, dimensioned PDF drawings and other files in the project folder. Open them right inside Panelwright, PDFs included. Drag files in, or paste an image with Ctrl+V.</p></div>
+      <div><h4>Users and roles</h4><p>Designer, accountant, manager and director roles are ready, and you edit what each role may do. A designer can be kept away from prices and profit. This is protection between colleagues, not secrecy-grade security.</p></div>
+      <div><h4>Catalogue</h4><p>Build a 16:9 PDF catalogue from project images, the material palette and hardware: a project catalogue for the client and a company catalogue for new customers. You choose the template, colour and logo.</p></div>
+    </div>
+    <div class="cta" style="margin-top:30px">
+      <a class="btn lg" href="management.html">Control center and project card →</a>
+      <a class="btn lg" href="team.html">Working as a team →</a>
+      <a class="btn lg" href="catalogue.html">Catalogue →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= SYSTEM ================= -->
 <section id="system">
   <div class="wrap">
@@ -218,7 +300,7 @@
       </div>
       <div class="card">
         <h3>Safe for a team</h3>
-        <p>Point several designers at one folder on a network drive or local server. The price and supplier database, the project archive, offcuts and stock all live there. File locking and atomic writes mean two simultaneous saves cannot lose each other's work.</p>
+        <p>Point several designers at one folder on a network drive or local server. The price and supplier database, the project archive, offcuts and stock all live there. File locking and atomic writes mean two simultaneous saves cannot lose each other's work. Staff can also sign in by name and code, with different permissions for each role.</p>
       </div>
     </div>
   </div>
@@ -317,6 +399,8 @@
     <details><summary>Is the nesting good enough for CNC?</summary><p>Yes, with one caveat worth knowing. Nesting is MaxRects with kerf, margins, grain and offcut re-use, and round or shaped parts keep their true contour in the DXF. Small parts are placed into the corners of round blanks — useful on a router, wrong on a panel saw, so there is a setting and a warning.</p></details>
     <details><summary>Can I use my own hardware, not the catalogue brands?</summary><p>Yes. The catalogue ships with real Blum, Hettich, Häfele, Grass and Salice models and their dimensions and drilling patterns, and you can add your own alongside them.</p></details>
     <details><summary>What does the trial include?</summary><p>Everything, for ten days. No card, no watermark, no limit on cabinets or exports. Your projects and settings stay after it ends — a key unlocks them again.</p></details>
+    <details><summary>Can each employee have different permissions? Can a designer be kept from seeing prices and profit?</summary><p>Yes. Designer, accountant, manager and director roles are ready, and you set each role's permissions (prices, profit, the business dashboard, quotes, the price list, editing projects, adding files). Staff sign in by name and code. This protects against seeing things by accident; the price file sits in the shared folder, so it is not secrecy-grade security.</p></details>
+    <details><summary>Do prices appear in a catalogue?</summary><p>Not in a project catalogue by default; you may include the total if you want it. Never in the company catalogue. The catalogue is a 16:9 PDF built from the project's images, material palette and hardware.</p></details>
   </div>
 </section>
 

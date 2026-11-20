@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+<style>.docshot{margin:18px 0 26px}.docshot img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #dde1e6}.docshot figcaption{font-size:.9rem;opacity:.8;margin-top:6px}</style>
 </head>
 <body>
 
@@ -36,6 +37,9 @@
     <a href="{{ '/cabinets.html' | relative_url }}"{% if page.url contains '/cabinets' %} class="here"{% endif %}>Creating cabinets</a>
     <a href="{{ '/costing.html' | relative_url }}"{% if page.url contains '/costing' %} class="here"{% endif %}>Costing</a>
     <a href="{{ '/documents.html' | relative_url }}"{% if page.url contains '/documents' %} class="here"{% endif %}>Documents</a>
+    <a href="{{ '/management.html' | relative_url }}"{% if page.url contains '/management' %} class="here"{% endif %}>Control center &amp; project card</a>
+    <a href="{{ '/team.html' | relative_url }}"{% if page.url contains '/team' %} class="here"{% endif %}>Working as a team</a>
+    <a href="{{ '/catalogue.html' | relative_url }}"{% if page.url contains '/catalogue' %} class="here"{% endif %}>Catalogue</a>
     <a href="{{ '/export.html' | relative_url }}"{% if page.url contains '/export' %} class="here"{% endif %}>Export &amp; CNC</a>
     <a href="{{ '/units-languages.html' | relative_url }}"{% if page.url contains '/units-languages' %} class="here"{% endif %}>Units &amp; languages</a>
     <a href="{{ '/license.html' | relative_url }}"{% if page.url contains '/license' %} class="here"{% endif %}>Licence &amp; activation</a>

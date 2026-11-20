@@ -29,7 +29,7 @@
     <span class="wm">Panel<span class="lt">wright</span></span>
   </a>
   <nav>
-    <a href="#cabinets">Шүүгээ</a><a href="#machines">Машин</a><a href="#paperwork">Баримт</a>
+    <a href="#cabinets">Шүүгээ</a><a href="#machines">Машин</a><a href="#paperwork">Баримт</a><a href="#business">Удирдлага</a>
     <a href="system.html">Цехэд зориулсан</a><a href="pricing.html">Үнэ</a><a href="shape.html">Shape</a><a href="clean.html">Clean</a><a href="getting-started.html">Гарын авлага</a><a href="../index.html" hreflang="en" lang="en">EN</a>
   </nav>
   <a class="btn red" href="pricing.html#trial">Үнэгүй туршиж үзэх</a>
@@ -184,6 +184,88 @@
   </div>
 </section>
 
+<style>
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:8px}
+.shots figure{margin:0;background:var(--card,#fff);border:1px solid var(--line,#dde1e6);border-radius:12px;overflow:hidden}
+.shots figure.wide{grid-column:1/-1}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:12px 16px 14px;font-size:.92rem;line-height:1.5}
+.shots figcaption b{display:block;margin-bottom:2px}
+@media (max-width:760px){.shots{grid-template-columns:1fr}}
+.docshot{margin:18px 0 26px}.docshot img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #dde1e6}
+.docshot figcaption{font-size:.9rem;opacity:.8;margin-top:6px}
+</style>
+<!-- ================= REAL WINDOW ================= -->
+<section id="screens">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Бодит цонх</div>
+      <h2>Panelwright <em>яг ийм харагддаг</em></h2>
+      <p>Доорх зургууд нь Panelwright-ийн бодит цонхноос, жишээ мэдээлэлтэй авсан дэлгэцийн зураг. SketchUp дотор тусдаа цонх болж нээгдэнэ.</p>
+    </div>
+    <div class="shots">
+      <figure>
+        <img src="../assets/desk_results_mn.webp" alt="Panelwright-ийн Үр дүн хэсэг: деталийн тоо, хавтан, тоноглол, ирмэг болон нийт төлөх дүн." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Үр дүн</b>Бүх деталь, хавтангийн тоо, материал, нийт төлөх дүн нэг дэлгэцэд.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/desk_prices_mn.webp" alt="Panelwright-ийн Үнийн сангийн хуудас: материал, хөлс, тоноглолын үнийн жагсаалт." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Үнийн сан</b>Материал, ажлын хөлс, тоноглолын үнийг өөрийн цехийн үнээр тохируулна.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/desk_management_mn.webp" alt="Удирдлагын самбар: төлөвлөгөөний биелэлт, өдрөөр борлуулалт, ажлын шатлал." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Удирдлагын самбар</b>Шинэ санал, батлагдсан, дууссан ажил, борлуулалт, ашиг, 7 хоног/сар/жилийн төлөвлөгөө.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/desk_report_mn.webp" alt="Сар, жилийн тайлан: сар бүрийн төслийн тоо, борлуулалт, өртөг, ашиг, ашгийн хувь ба талбай." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Сар, жилийн тайлан</b>Сар бүрийн төсөл, борлуулалт, өртөг, ашиг, ашгийн хувь, MASTER Excel рүү экспорт.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/desk_project_mn.webp" alt="Төсөл ба харилцагч хуудас: харилцагчийн мэдээлэл, төслийн нэр, код болон компанийн мэдээлэл." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Төсөл ба харилцагч</b>Харилцагчийн мэдээлэл, төслийн нэр, код, компанийн толгой нэг дор.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/desk_business_mn.webp" alt="Бизнесийн самбар: нийт төсөл, борлуулалт, сар бүрийн борлуулалтын график, статусын задаргаа." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Бизнесийн самбар</b>Нийт төсөл, борлуулалт, ашиг, сар бүрийн график, статусын задаргаа.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/desk_manual_mn.webp" alt="Гараар төсөл нэмэх маягт: харилцагч, төслийн нэр, мөр бүрийн нэр, тоо, дүн болон нийт дүн." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Гараар төсөл нэмэх</b>Моделгүй ажлыг мөр мөрөөр задлан бүртгэнэ, нийт дүн мөрүүдийн нийлбэрээс гарна.</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/desk_team_mn.webp" alt="Хэрэглэгч, дүр, эрхийн хуудас: хэрэглэгчийн жагсаалт болон дүр бүрийн эрхийн сонголт." width="1920" height="1080" loading="lazy" decoding="async">
+        <figcaption><b>Хэрэглэгч ба дүр</b>Дизайнер, нягтлан, менежер, захирал: дүр бүрийн эрхийг тохируулна.</figcaption>
+      </figure>
+      <figure class="wide">
+        <img src="../assets/catalogue_templates_mn.webp" alt="Каталогийн наймн загварын нүүр хуудсын харьцуулалт." width="2728" height="932" loading="lazy" decoding="async">
+        <figcaption><b>Каталогийн 8 загвар</b>Panelwright, Studio, Noir, Sand, Forest, Navy, Classic, Minimal: тус бүр өөрийн өнгө, нүүр хуудасны зохиомжтой.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUSINESS & TEAM ================= -->
+<section id="business">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kicker">Бизнес ба баг</div>
+      <h2>Цехийн удирдлага <em>мөн SketchUp дотор</em></h2>
+      <p>Ажлаа зурж, тооцоод зогсохгүй: хэдэн ажил орж ирсэн, хэд нь дууссан, ашиг хэд вэ, хэний ажил хоцорч байна вэ гэдгийг нэг цонхноос харна. Баг нь нэр, кодоор нэвтэрч, дүрдээ оноосон мэдээллийг л үзнэ.</p>
+    </div>
+    <div class="strip">
+      <div><h4>Удирдлагын самбар</h4><p>Шинэ санал, батлагдсан, дууссан ажил, борлуулалт, ашиг нэг дэлгэцэнд. 7 хоног, сар, жилийн төлөвлөгөөний биелэлт, ажлын шатлал, хоцорсон ажил, дизайнер бүрийн ачаалал.</p></div>
+      <div><h4>Төслийн карт</h4><p>Төсөл бүрийн render, бодит дууссан зураг, хэмжээтэй PDF зураг, бусад файл төслийн фолдерт хадгалагдана. Panelwright дотроос шууд нээж үзнэ, PDF ч мөн. Файлаа чирж оруулна, зургаа Ctrl+V-ээр буулгана.</p></div>
+      <div><h4>Хэрэглэгч ба дүр</h4><p>Дизайнер, нягтлан, менежер, захирал гэсэн дүр бэлэн бөгөөд дүр бүрийн эрхийг өөрөө тохируулна. Дизайнерт үнэ, ашиг харагдахгүй байж болно. Энэ нь ажилтнуудын дундах хамгаалалт: нууц хадгалах түвшний аюулгүй байдал биш.</p></div>
+      <div><h4>Каталог</h4><p>Төслийн зураг, материалын палитр, тоноглолоос 16:9 PDF каталог гаргана: захиалагчид өгөх төслийн каталог, шинэ харилцагчид үзүүлэх компанийн каталог. Загвар, өнгө, логогоо сонгоно.</p></div>
+    </div>
+    <div class="cta" style="margin-top:30px">
+      <a class="btn lg" href="management.html">Удирдлага ба төслийн карт →</a>
+      <a class="btn lg" href="team.html">Багаар ажиллах →</a>
+      <a class="btn lg" href="catalogue.html">Каталог →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= SYSTEM ================= -->
 <section id="system">
   <div class="wrap">
@@ -221,7 +303,7 @@
       </div>
       <div class="card">
         <h3>Багаар ажиллахад аюулгүй</h3>
-        <p>Хэд хэдэн дизайнерыг сүлжээний диск эсвэл локал серверийн нэг фолдер руу чиглүүлнэ. Үнэ ба нийлүүлэгчийн сан, төслийн архив, үлдэгдэл, нөөц бүгд тэнд байна. Файл түгжих, атом бичилт нь хоёр хүн нэгэн зэрэг хадгалахад бие биеийнхээ ажлыг алдахгүй байлгана.</p>
+        <p>Хэд хэдэн дизайнерыг сүлжээний диск эсвэл локал серверийн нэг фолдер руу чиглүүлнэ. Үнэ ба нийлүүлэгчийн сан, төслийн архив, үлдэгдэл, нөөц бүгд тэнд байна. Файл түгжих, атом бичилт нь хоёр хүн нэгэн зэрэг хадгалахад бие биеийнхээ ажлыг алдахгүй байлгана. Мөн нэр, кодоор нэвтэрч, дүр бүрт өөр эрх өгч болно.</p>
       </div>
     </div>
   </div>
@@ -320,6 +402,8 @@
     <details><summary>Nesting нь CNC-д хангалттай сайн уу?</summary><p>Тийм, нэг анхаарах зүйлтэйгээр. Nesting нь зүсвэр, зай, судал, үлдэгдлийг дахин ашиглахыг тооцдог MaxRects бөгөөд дугуй, хэлбэртэй деталь DXF дотор жинхэнэ контураа хадгална. Жижиг деталийг дугуй заготовкийн булан руу байрлуулдаг — роутер дээр хэрэгтэй, харин хавтан зүсэгч дээр тохирохгүй тул тохиргоо болон анхааруулга байдаг.</p></details>
     <details><summary>Каталогийн брэндийн биш, өөрийн тоноглолыг ашиглаж болох уу?</summary><p>Болно. Каталогт Blum, Hettich, Häfele, Grass, Salice-ийн бодит загвар, хэмжээс, өрөмдлөгийн схем орсон бөгөөд өөрийнхөө тоноглолыг хажууд нь нэмж болно.</p></details>
     <details><summary>Туршилтад юу багтдаг вэ?</summary><p>Бүгд, арван хоногийн турш. Карт, усан тэмдэг, шүүгээ эсвэл экспортын хязгаар байхгүй. Дууссаны дараа таны төсөл, тохиргоо үлдэх бөгөөд түлхүүр дахин нээнэ.</p></details>
+    <details><summary>Ажилтан бүрт өөр эрх өгч болох уу? Дизайнер үнэ, ашгийг харахгүй байж чадах уу?</summary><p>Болно. Дизайнер, нягтлан, менежер, захирал гэсэн дүр бэлэн бөгөөд дүр бүрийн эрхийг (үнэ, ашиг, бизнесийн самбар, үнийн санал, үнийн сан, төсөл засах, файл нэмэх) өөрөө тохируулна. Ажилтан нэр, кодоор нэвтэрнэ. Энэ нь санамсаргүй харахаас сэргийлэх хамгаалалт, үнийн файл дундын фолдерт байдаг тул нууц хадгалах түвшний биш.</p></details>
+    <details><summary>Каталог гаргахад үнэ орох уу?</summary><p>Төслийн каталогт үнэ анхдагчаар орохгүй, танд хэрэгтэй бол нийт дүнг сонгож оруулна. Компанийн каталогт үнэ хэзээ ч орохгүй. Каталог нь төслийн зураг, материалын палитр, тоноглолоос 16:9 PDF болж гарна.</p></details>
   </div>
 </section>
 

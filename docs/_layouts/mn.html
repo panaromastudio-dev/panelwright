@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+<style>.docshot{margin:18px 0 26px}.docshot img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #dde1e6}.docshot figcaption{font-size:.9rem;opacity:.8;margin-top:6px}</style>
 </head>
 <body>
 
@@ -36,6 +37,9 @@
     <a href="{{ '/mn/cabinets.html' | relative_url }}"{% if page.url contains '/cabinets' %} class="here"{% endif %}>Шүүгээ үүсгэх</a>
     <a href="{{ '/mn/costing.html' | relative_url }}"{% if page.url contains '/costing' %} class="here"{% endif %}>Өртгийн тооцоо</a>
     <a href="{{ '/mn/documents.html' | relative_url }}"{% if page.url contains '/documents' %} class="here"{% endif %}>Баримт бичиг</a>
+    <a href="{{ '/mn/management.html' | relative_url }}"{% if page.url contains '/management' %} class="here"{% endif %}>Удирдлага ба төслийн карт</a>
+    <a href="{{ '/mn/team.html' | relative_url }}"{% if page.url contains '/team' %} class="here"{% endif %}>Багаар ажиллах</a>
+    <a href="{{ '/mn/catalogue.html' | relative_url }}"{% if page.url contains '/catalogue' %} class="here"{% endif %}>Каталог</a>
     <a href="{{ '/mn/export.html' | relative_url }}"{% if page.url contains '/export' %} class="here"{% endif %}>Экспорт ба CNC</a>
     <a href="{{ '/mn/units-languages.html' | relative_url }}"{% if page.url contains '/units-languages' %} class="here"{% endif %}>Нэгж ба хэл</a>
     <a href="{{ '/mn/license.html' | relative_url }}"{% if page.url contains '/license' %} class="here"{% endif %}>Лиценз ба идэвхжүүлэлт</a>
