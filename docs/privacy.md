@@ -53,9 +53,13 @@ Legal basis: our legitimate interest in supporting the product (Art. 6(1)(f) GDP
 
 Once per day, and when you choose *Check for updates*, the Software requests a small text file from **GitHub** (`raw.githubusercontent.com`) to learn the latest version number. GitHub sees your IP address and a standard user-agent, as with any web request; GitHub's privacy statement applies. We do not receive this request. You can disable automatic checking in the settings.
 
+## 4A. This website
+
+Our website (panelwright.app) uses **GoatCounter**, a privacy-friendly statistics service, to count page views and clicks on the download and purchase buttons. It does not use cookies, does not track you across other websites and does not build personal profiles; we see only aggregated figures such as the page visited, the referring site, country, browser and screen size. Legal basis: our legitimate interest in understanding how the website is used (Art. 6(1)(f) GDPR). The website itself is hosted by GitHub Pages; GitHub's privacy statement applies to that hosting.
+
 ## 5. What we do NOT do
 
-- No analytics, no usage tracking, no crash reporting to a server
+- The Software itself contains no analytics, no usage tracking and no crash reporting to a server
 - No advertising, no selling or sharing of data with third parties for marketing
 - No access to your SketchUp models, files or documents
 - No processing of payment card data (handled by Trimble or our payment provider)
