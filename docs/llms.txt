@@ -1,0 +1,32 @@
+# Panelwright
+
+> Panelwright is a SketchUp extension for cabinet and furniture shops. From one 3D model it produces the cut list, sheet nesting, CNC DXF files, costing, quotation, invoice, contract, stock and profit per project. Made by Panorama Studio, Ulaanbaatar.
+
+## Key facts
+
+- Type: SketchUp extension (.rbz), signed by Trimble
+- Requires: SketchUp 2021 or newer, Pro or Studio, Windows or macOS. It does not run in SketchUp Free or Go on the web.
+- Price: $29 per month, $290 per year, or $490 once (perpetual, 12 months of updates). Teams: 3 seats $690 per year, 10 seats $1,990 per year.
+- Free trial: 10 days, every feature, no credit card
+- Refund: 14-day money-back guarantee
+- Languages: English, Español, Türkçe, Русский, 中文, Монгол
+- Units: millimetres or fractional inches; A4 or Letter documents
+- CNC: exports DXF with true contours and System 32 drilling for CAM software. It does not write G-code.
+- Also from the same studio: PANORAMA Shape, a free SketchUp extension for stretching furniture and filleting edges.
+
+## Pages
+
+- [Overview](https://panelwright.app/): what the system does, with screenshots
+- [Pricing and free trial](https://panelwright.app/pricing.html): plans, download, how buying works
+- [Compared with other tools](https://panelwright.app/compare.html): Panelwright next to OpenCutList, CabinetSense, CabWriter, Mozaik and CutList Plus
+- [FAQ](https://panelwright.app/faq.html): what it is, cost, trial, versions, CNC, everyday questions
+- [For shops and factories](https://panelwright.app/system.html): how one job runs from model to profit
+- [Getting started](https://panelwright.app/getting-started.html): install, activate, language and units
+- [Costing](https://panelwright.app/costing.html): where every number in a quote comes from
+- [Export and CNC](https://panelwright.app/export.html): DXF, drilling, Excel, CSV
+- [Licence and activation](https://panelwright.app/license.html)
+- [PANORAMA Shape](https://panelwright.app/shape.html): free extension
+
+## Contact
+
+support@panelwright.app
