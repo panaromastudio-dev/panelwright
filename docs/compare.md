@@ -14,7 +14,7 @@ It costs **$29 per month**, **$290 per year** or **$490 once**. The 10-day trial
 
 | Tool | What it is | Main focus | Public price | Trial |
 |---|---|---|---|---|
-| **Panelwright** | SketchUp extension | The whole job: cabinets, cut list, nesting, CNC DXF, costing, quotation, invoice, stock, profit | $29 / month, $290 / year or $490 once | 10 days, no card |
+| **Panelwright** | SketchUp extension | The whole job: cabinets, cut list, nesting, CNC DXF, costing, quotation, invoice, contract and every shop document, client and project archive, stock, profit, a client catalogue generated from your projects, team roles and permissions | $29 / month, $290 / year or $490 once | 10 days, no card |
 | **OpenCutList** | SketchUp extension, open source (GPLv3) | Cut lists, cutting diagrams, labels, cost and weight reports | No purchase price, funded by voluntary contributions | Not needed |
 | **CabinetSense** | SketchUp extension | Parametric cabinets, DXF for CAM, line boring, knock-down fasteners | From $25 / month | Yes |
 | **CabWriter** | SketchUp extension | Parametric cabinet drawing, cut lists, part labels, CNC export | From $95 once, free version available | Yes |
@@ -37,6 +37,10 @@ Prices and features of other products come from their public listings in Novembe
 - You need the cost with margin and tax, then a quotation, invoice and contract with your company header.
 - You cut on a panel saw or a CNC and want nesting layouts, labels, drilling drawings and DXF.
 - You want stock levels, offcuts, purchase orders and planned against actual profit per project.
+- You want every client and project kept in one archive, with its files, status and history.
+- You want the full set of production paperwork from one calculation: assembly sheets, labels, packing lists, the shop packet.
+- You want a catalogue of your finished work, generated from your own projects, to show to new clients.
+- Several people work on the same jobs, and roles decide who sees prices and profit and who can edit.
 
 ## What Panelwright does not do
 
